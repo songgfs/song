@@ -1,0 +1,361 @@
+<<<<<<< HEAD
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+a{color:#F00}
+.d {
+	border-top-color: #F3F;
+	border-right-color: #F3F;
+	border-bottom-color: #F3F;
+	border-left-color: #F3F;
+}
+div{border:5px solid #ff0000} 
+.cities {
+    background-color:#69F;
+    color:#F0F;
+    margin:20px;
+    padding:20px;
+	width:500px;
+} 
+
+#header {
+    background-color:#009;
+    color:white;
+    text-align:center;
+    padding:5px;
+	width:500px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:70px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;
+	width:260px;	 	 
+}
+#footer {
+    background-color:#009;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;
+   width:500px;	 	 
+}
+</style>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<body>
+<ol>
+  <li><a>段落标记</a><p>这是一个段落！通过结束标签来关闭 HTML 是一种经得起未来考验的 HTML 编写方法。清楚地标记某个元素在何处开始，并在何处结束，不论对您还是对浏览器来说，都会使代码更容易理解。</p></li>
+  <li><a>换行</a> <br><br></li>
+  <!-- 这是一段注释 -->
+  <li><a>预定义</a>
+<pre>社会主义核心价值观：
+   富强、民主、文明、和谐
+   自由、平等、公正、法制
+   爱国、敬业、诚信、友善</pre></li>
+<li><a>块级层 用于页面布局可以放任何元素，换行</a><div class="d" style="height:100px; width:100px;">我是一个div  ccccccccccc</div></li>
+<li><a>行级层，可以放文本，在一行文本中突出显示，不换行</a><br>span 可以<span style="color:#60F"><strong><em>突出</em></strong></span>显示</li>
+<li><a>使用外联样式</a><p id="b">我使用id为b的样式</li>
+<li><a>使用标题</a><h1>这是标题1</h1>
+<h2>这是标2</h2>
+<h3>这是标题3</h3></li>
+<li><a>添加超链接</a><br><a style="color:#00C"href="https://www.baidu.com/">点此跳转到百度</a>
+</li>
+<li><a>添加图片</a><br><img src="../../Pictures/Camera Roll/无标题.png" width="304" height="355"></li>
+<li><a>插入表格</a><table border="1">
+<tr>
+<td>学号</td>
+<td>姓名</td>
+<td>班级</td>
+</tr>
+<tr>
+<td>1</td>
+<td>刘文燕</td>
+<td>1</td>
+</tr>
+</table></li>
+<li><a>无序列表</a>
+<ul>
+<li>中国</li>
+<li>北京</li>
+<li>上海</li>
+<li>南京</li>
+</ul>
+<a>有序列表</a>
+<ol>
+<li>北京</li>
+<li>上海</li>
+<li>南京</li>
+</ol>
+</li>
+<li><a>类的应用</a>
+<div class="cities">
+<h2>类的应用</h2>
+<p>
+对 HTML 进行分类（设置类），使我们能够为元素的类定义 CSS 样式。
+为相同的类设置相同的样式，或者为不同的类设置不同的样式。
+</p>
+</div> </li>
+<li><a>布局</a><div id="header">
+<h1>City Gallery</h1>
+</div>
+
+<div id="nav">
+London<br>
+Paris<br>
+Tokyo<br>
+</div>
+
+<div id="section">
+<h1>London</h1>
+<p>
+London is the capital city of England. It is the most populous city in the United Kingdom,
+with a metropolitan area of over 13 million inhabitants.
+</p>
+<p>
+Standing on the River Thames, London has been a major settlement for two millennia,
+its history going back to its founding by the Romans, who named it Londinium.
+</p>
+</div>
+
+<div id="footer">
+Copyright W3School.com.cn
+</div>
+</li>
+<li><a href="框架1.html">查看框架</a>
+<a href="框架2.html">混合框架</a>
+<a href="框架3.html">含有 noresize="noresize" 属性的框架结构</a>
+<a href="framefour.html">导航框架</a><br>
+
+<a href="框架1.html">内联框架</a><iframe src="../../Pictures/Camera Roll/无标题.png"></iframe></li>
+<li><a>背景</a><div style="background:url(../../Pictures/Camera%20Roll/%E6%97%A0%E6%A0%87%E9%A2%98.png); width:300px; height:350px"></div></li>
+<li><a>插入脚本</a>
+<script type="text/javascript">
+document.write("<h1>Hello World!</h1>")
+</script> 
+</li>
+<li><a>表单</a><form>
+  <p>用户名:
+  <input type="text" name="username">
+    <br>
+    密码:
+    <input type="password" name="password"><br><br>
+    
+    性别:
+    <input type="radio" name="sex" value="男" checked>
+    男
+    
+    <input type="radio" name="sex" value="女">女</p>
+  备注：<br>
+    
+    <label for="textarea"></label>
+    <textarea name="textarea" id="textarea"></textarea><br>
+  爱好： 读书 <input name="读书" type="checkbox" value="" checked>看电影<input name="看电影" type="checkbox" value=""> 打篮球<input name="打篮球" type="checkbox" value=""><br><br>
+  地址：<select name="city">
+<option value="zhengzhou">郑州</option>
+<option value="商丘">商丘</option>
+<option value="周口">周口</option>
+<option value="开封">开封</option>
+</select><br>
+<br>上传：<input name="" type="file"><br><br>
+<input type="submit" name="确定" id="确定" value="提交">
+
+</form>
+
+</li>
+<li></li>
+<li>问题： 导航框架 div不熟练</li>
+</body>
+</html>
+=======
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+a{color:#F00}
+.d {
+	border-top-color: #F3F;
+	border-right-color: #F3F;
+	border-bottom-color: #F3F;
+	border-left-color: #F3F;
+}
+div{border:5px solid #ff0000} 
+.cities {
+    background-color:#69F;
+    color:#F0F;
+    margin:20px;
+    padding:20px;
+	width:500px;
+} 
+
+#header {
+    background-color:#009;
+    color:white;
+    text-align:center;
+    padding:5px;
+	width:500px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:70px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px;
+	width:260px;	 	 
+}
+#footer {
+    background-color:#009;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;
+   width:500px;	 	 
+}
+</style>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<body>
+<ol>
+  <li><a>段落标记</a><p>这是一个段落！通过结束标签来关闭 HTML 是一种经得起未来考验的 HTML 编写方法。清楚地标记某个元素在何处开始，并在何处结束，不论对您还是对浏览器来说，都会使代码更容易理解。</p></li>
+  <li><a>换行</a> <br><br></li>
+  <!-- 这是一段注释 -->
+  <li><a>预定义</a>
+<pre>社会主义核心价值观：
+   富强、民主、文明、和谐
+   自由、平等、公正、法制
+   爱国、敬业、诚信、友善</pre></li>
+<li><a>块级层 用于页面布局可以放任何元素，换行</a><div class="d" style="height:100px; width:100px;">我是一个div  ccccccccccc</div></li>
+<li><a>行级层，可以放文本，在一行文本中突出显示，不换行</a><br>span 可以<span style="color:#60F"><strong><em>突出</em></strong></span>显示</li>
+<li><a>使用外联样式</a><p id="b">我使用id为b的样式</li>
+<li><a>使用标题</a><h1>这是标题1</h1>
+<h2>这是标2</h2>
+<h3>这是标题3</h3></li>
+<li><a>添加超链接</a><br><a style="color:#00C"href="https://www.baidu.com/">点此跳转到百度</a>
+</li>
+<li><a>添加图片</a><br><img src="../../Pictures/Camera Roll/无标题.png" width="304" height="355"></li>
+<li><a>插入表格</a><table border="1">
+<tr>
+<td>学号</td>
+<td>姓名</td>
+<td>班级</td>
+</tr>
+<tr>
+<td>1</td>
+<td>刘文燕</td>
+<td>1</td>
+</tr>
+</table></li>
+<li><a>无序列表</a>
+<ul>
+<li>中国</li>
+<li>北京</li>
+<li>上海</li>
+<li>南京</li>
+</ul>
+<a>有序列表</a>
+<ol>
+<li>北京</li>
+<li>上海</li>
+<li>南京</li>
+</ol>
+</li>
+<li><a>类的应用</a>
+<div class="cities">
+<h2>类的应用</h2>
+<p>
+对 HTML 进行分类（设置类），使我们能够为元素的类定义 CSS 样式。
+为相同的类设置相同的样式，或者为不同的类设置不同的样式。
+</p>
+</div> </li>
+<li><a>布局</a><div id="header">
+<h1>City Gallery</h1>
+</div>
+
+<div id="nav">
+London<br>
+Paris<br>
+Tokyo<br>
+</div>
+
+<div id="section">
+<h1>London</h1>
+<p>
+London is the capital city of England. It is the most populous city in the United Kingdom,
+with a metropolitan area of over 13 million inhabitants.
+</p>
+<p>
+Standing on the River Thames, London has been a major settlement for two millennia,
+its history going back to its founding by the Romans, who named it Londinium.
+</p>
+</div>
+
+<div id="footer">
+Copyright W3School.com.cn
+</div>
+</li>
+<li><a href="框架1.html">查看框架</a>
+<a href="框架2.html">混合框架</a>
+<a href="框架3.html">含有 noresize="noresize" 属性的框架结构</a>
+<a href="框架4.html">导航框架</a><br>
+
+<a href="框架1.html">内联框架</a><iframe src="../../Pictures/Camera Roll/无标题.png"></iframe></li>
+<li><a>背景</a><div style="background:url(../../Pictures/Camera%20Roll/%E6%97%A0%E6%A0%87%E9%A2%98.png); width:300px; height:350px"></div></li>
+<li><a>插入脚本</a>
+<script type="text/javascript">
+document.write("<h1>Hello World!</h1>")
+</script> 
+</li>
+<li><a>表单</a><form>
+  <p>用户名:
+  <input type="text" name="username">
+    <br>
+    密码:
+    <input type="password" name="password"><br><br>
+    
+    性别:
+    <input type="radio" name="sex" value="男" checked>
+    男
+    
+    <input type="radio" name="sex" value="女">女</p>
+  备注：<br>
+    
+    <label for="textarea"></label>
+    <textarea name="textarea" id="textarea"></textarea><br>
+  爱好： 读书 <input name="读书" type="checkbox" value="" checked>看电影<input name="看电影" type="checkbox" value=""> 打篮球<input name="打篮球" type="checkbox" value=""><br><br>
+  地址：<select name="city">
+<option value="zhengzhou">郑州</option>
+<option value="商丘">商丘</option>
+<option value="周口">周口</option>
+<option value="开封">开封</option>
+</select><br>
+<br>上传：<input name="" type="file"><br><br>
+<input type="submit" name="确定" id="确定" value="提交">
+
+</form>
+
+</li>
+<li></li>
+<li>问题： 导航框架 div不熟练</li>
+</body>
+</html>
+>>>>>>> b0aa93814e9a22ff4476185fd0a9474ba8425eda

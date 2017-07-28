@@ -1,0 +1,109 @@
+* {
+	box-sizing: border-box;
+}
+/*首页页面样式*/
+
+#hot_words a {
+	color: #666;
+}
+
+#top {
+	width: 100%;
+	height: 40px;
+	background: #FAFAFA;
+	line-height: 40px;
+	border-bottom: 1px solid #eee;
+}
+#head_top,
+#headMain_content,
+#container_banner,
+#hot_recommended,
+#product_show {
+	margin: 0 auto;
+	position: relative;
+	width: 1200px;
+}
+#head_top {
+	height: 40px;
+	line-height: 40px;
+}
+#head_main,
+#head2_main {
+	width: 100%;
+	border-bottom: 3px solid #3CA3DD;
+}
+#head2_main {
+	border-bottom: 0;
+}
+#headMain_content {
+	height: 100px;
+	padding: 15px 0;
+}
+/*注册页面样式*/
+.zg-container {
+	width: 100%;
+	border-bottom: 2px solid #278add;
+}
+.zm-container {
+	width: 700px;
+	padding: 40px;
+	margin: 0 auto;
+}
+.zm-rgtitle {
+	width: 1200px;
+	margin: 0 auto;
+}
+.zm-rgtitle span {
+	display: block;
+	margin: 20px 0;
+	color: #333;
+	font-size: 16px;
+}
+.zm-rgtitle h3 {
+	font-size: 20px;
+	color: #fff;
+	padding-left: 30px;
+	height: 32px;
+	line-height: 32px;
+	background: #36a5dd;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+.form-group1 {
+	margin-bottom: 25px;
+}
+.form-group1 label i {
+	width: 7px;
+	height: 8px;
+	margin-right: 10px;
+	margin-bottom: 3px;
+}
+.form-group1>input {
+	display: inline-block;
+	width: 200px;
+	padding: 0 4px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 2px;
+	border: 1px solid #aaa;
+}
+.form-group1>span {
+	padding-left: 20px;
+	font-size: 12px;
+	color: #ff7f00;
+}
+.hidden {
+	display: none;
+}
+.logo-title {
+	width: 210px;
+	height: 70px;
+}
+.logo-title h3 {
+	height: 80px;
+	line-height: 70px;
+	font-size: 24px;
+}
+.rt{
+	float:right;
+}

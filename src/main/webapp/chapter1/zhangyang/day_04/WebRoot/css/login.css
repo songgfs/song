@@ -1,0 +1,58 @@
+/*添加浅灰色背景*/
+body {
+	background-color: #F2F2F2;
+}
+.content {
+	margin-top: 150px;
+}
+/*登录按钮样式*/
+.content button {
+	height: 30px;
+	color: white; 
+	font-size: 18px; 
+	border: 0px;
+	padding: 0px; 
+	cursor: pointer; 
+}
+/*登录面板*/
+.content .panel {
+	background-color: white; 
+	width: 302px; 
+	text-align: center; 
+	margin: 0px auto; 
+	padding-top: 20px; 
+	padding-bottom: 20px; 
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+/*登录和密码组*/
+.content .panel .group {
+	text-align: left; 
+	width: 262px; 
+	margin: 0px auto 20px; 
+}
+.content .panel .group label {
+	line-height: 30px; 
+	font-size: 18px; 
+}
+.content .panel .group input {
+	display: block; 
+	width: 250px;
+	height: 30px; 
+	border: 1px solid #ddd; 
+	padding: 0px 0px 0px 10px; 
+	font-size: 16px; 
+}
+.content .panel .group input:focus {
+	border-left: 1px solid #CC865E; /*当输入框成为焦点时，左边框颜色编程褐色*/
+}
+
+.content .panel .login button {
+	background-color: #CC865E; 
+	width: 260px;
+}
+.content .panel .login button:hover {
+	background-color: white; 
+	color: #CC865E; 
+	border: 1px solid #CC865E;
+}

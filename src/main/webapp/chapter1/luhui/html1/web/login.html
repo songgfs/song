@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册信息</title>
+    <script>
+        function go(){
+            alert("申请成功");
+        }
+        function back(){
+            window.open("Main.html");
+        }
+
+    </script>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        body{
+            font-family: 微软雅黑;
+            font-size:16px;
+        }
+        #tou{
+            margin:0 auto;
+        }
+        fieldset{
+
+            border:none;
+            margin-bottom: 12px;
+            overflow: hidden;
+            padding: 30px 30px;
+        }
+        ul{
+           border: 1px solid blue;
+            list-style: none;
+            margin:1px;
+            padding: 30px;
+        }
+        li{
+            margin: 0.5em ;
+        }
+        label{
+            display:inline-block;
+            padding:3px 6px;
+            text-align: right;
+            width: 500px;
+        }
+
+        h2{
+            border-bottom: 1px solid;
+            border-top: 1px solid;
+
+        }
+        h2.a1{
+            font-size: 20px;
+            background-color:black;
+            color: azure;
+        }
+        #b1{
+            width: 1000px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+       #large{
+           text-align: left;
+       }
+        #d2{
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2px;
+        }
+        .bt3{
+            float: left;
+        }
+        .bt4{
+            float: right;
+        }
+
+    </style>
+</head>
+<body bgcolor="#dcdcdc">
+
+<div id="tou">
+    <h2 class="a1">创建一个账号</h2>
+    <form class="c1">
+        <fieldset>
+       <ul>
+           <li>
+               <label for="yhm" >账号注册</label>
+               <input type="text" id="yhm" maxlength="10" value="" class="large">
+           </li>
+           <li>
+               <label for="email" >邮箱地址:</label>
+               <input type="email" id="email" value="" class="large">
+           </li>
+           <li>
+               <label for="password">密码</label>
+               <input type="password" id="password" value="" class="medium">
+           </li>
+           <li>
+               <label for="password2">再次确认密码</label>
+               <input type="password" id="password2" value="" class="medium">
+           </li>
+       </ul>
+            </fieldset>
+        <h2 class="a1">地址</h2>
+        <fieldset>
+
+        <ul>
+            <li>
+                <label for="address">街道地址</label>
+                <input type="text" id="address" value="" class="large">
+            </li>
+            <li>
+                <label >省份</label>
+                <select>
+                    <option value="HN">河南</option>
+                    <option value="HB">湖北</option>
+                    <option value="BJ">北京</option>
+                    <option value="SH">上海</option>
+                    <option value="GZ">广州</option>
+                </select>
+            </li>
+            <li>
+                <label for="yb">邮编</label>
+                <input type="text" id="yb" value="" class="large">
+            </li>
+        </ul>
+        </fieldset>
+        <h2 class="a1">信息</h2>
+        <fieldset>
+
+            <ul>
+                <li>
+                    <label for="number">身份证号</label>
+                    <input type="tel" id="number"  value="" class="large">
+                </li>
+                <li>
+                    <label>性别</label>
+                    <input type="radio" name="sex" value="man"class="large">男
+                    <input type="radio" name="sex" value="woman"class="large">女
+                </li>
+            </ul>
+        </fieldset>
+        </form>
+    <div id="d2">
+      <form>
+        <input type="button" value="提交"class="bt3" onclick="go()">
+        <input type="button" value="返回" class="bt4" onclick="back()">
+      </form>
+    </div>
+</div>
+
+</body>
+</html>

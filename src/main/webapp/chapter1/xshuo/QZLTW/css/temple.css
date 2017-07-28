@@ -1,0 +1,40 @@
+.center {
+	width: 1000px;
+	margin: 0 auto;
+}
+/*顶部 B*/
+.top {
+	height: 47px;
+	background-color: #E9E8E8;
+}
+.top .top_c {
+	height: 47px;
+	line-height: 47px;
+}
+/*顶部 E*/
+/*logo B*/
+.logo {
+	height: 61px;
+	background-color: #FACC2E;
+}
+.logo .l_c {
+	height: 61px;
+}
+.logo .l_left h1 a {
+	display: inline-block;
+	width: 186px;
+	height: 61px;
+	background: url(../img/logo.png);
+	text-indent: -9999em;
+}
+/*logo E*/
+/*内容 B*/
+
+/*内容 E*/
+/*foot B*/
+.foot {
+
+	height: 20px;
+	background-color: #2F2F2F;
+}
+/*foot E*/

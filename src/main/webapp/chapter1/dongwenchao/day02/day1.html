@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <style type="text/css">
+            td.test1 {padding: 1.5cm}
+            td.test2 {padding: 0.5cm 2.5cm}
+        </style>
+        <style>
+            a:link {color:#FF0000;}    /* 未被访问的链接 */
+            a:visited {color:#00FF00;} /* 已被访问的链接 */
+            a:hover {color:#FF00FF;}   /* 鼠标指针移动到链接上 */
+            a:active {color:#0000FF;}  /* 正在被点击的链接 */
+        </style>
+        <style type="text/css">
+            span.highlight
+            {
+                background-color:yellow
+            }
+        </style>
+        <style type="text/css">
+            body 
+            {
+                background-image:url(ren.png);
+                background-repeat: no-repeat;
+                background-attachment:fixed;
+                background-position: 30% 20%; 
+            }
+        </style>
+        <style>
+            table.lamp {
+                width:100%;
+                border:1px solid #d4d4d4;
+            }
+            table.lamp th, td {
+                color:red;
+                padding:10px;
+            }
+            table.lamp td {
+                width:40px;
+            }
+        </style>
+        <style>
+            .cities {
+                background-color:black;
+                color:white;
+                margin:20px;
+                padding:20px;
+            } 
+        </style>
+        <style type="text/css">
+            h1 {color: red}
+            pre {color:greenyellow;font-size:20px;font-family:楷体;}
+        </style>
+        <title>html第一天学习</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base target="_blank" />
+    </head>
+    <body bgcolor="">
+        <h1 align="center">这是我的第一个HTML</h1><hr />
+        <div style="color:#00FF00">
+            <h2>这是我的第一个HTML</h2>
+        </div>
+        <!--
+        <h3>这是我的第一个HTML</h3>
+        <h4>这是我的第一个HTML</h4>
+        <h5>这是我的第一个HTML</h5>
+        <h6>这是我的第一个HTML</h6>
+        -->
+        <p style="font-family:楷体;color:red;font-size:20px;">我叫<ins>董稳超</ins>，<b>7月10号<sub>上午九点</sub></b>来我们<em>亚信公司</em>报到。</p>
+        <p style="background-color: red ">我很高兴，<span class="highlight">我会好好学习</span> ，好好工作。</p>
+        <a href="https://www.baidu.com/"  style="text-decoration:none">百度一下 你就知道</a><br/><br/>
+        <a href="http://www.w3school.com.cn">学习网站</a><br/><br/>
+        <img src="zou.png"  alt="雪人" width="200" height="250" /><br/>
+        <a href="tiaozhuan.html" target="_blank">
+            <img border="0" src="xiayiye.png" />
+        </a>
+        <pre>
+    我们每天上午九点上班   
+    十一点半
+    下班。休息两个半小时！
+    下午两点上班  六点下班。
+        </pre>
+        <table border="1" class="lamp">
+            <caption>我的上班时间</caption>
+            <tr>
+                <td>姓名</td>
+                <td>上午</td>
+                <td>下午</td>
+            </tr>
+            <tr>
+                <td>董稳超</td>
+                <td>九点到十一点</td>
+                <td>下两点到六点</td>
+            </tr>
+        </table>
+        <div class="cities">
+            <h2 align="center">第二天学习</h2>
+            <p>
+                昨天一天收获很多，今天会更加努力！加油
+            </p>
+        </div>
+        <div id="header">
+            <h1>组成员</h1>
+        </div>
+
+        <div id="nav">
+            董稳超<br>
+            王景洲<br>
+            冯朝霞<br>
+        </div>
+
+        <div id="section">
+            <h1>董稳超</h1>
+            <p>
+                好好学习天天向上！
+            </p>
+        </div>
+        <div id="footer">
+            学习网站： W3School.com.cn
+        </div>
+        <iframe src="frame_a.html" ></iframe>
+
+        <p><a href="http://www.w3school.com.cn" target="iframe_a">W3School.com.cn</a></p>
+
+        <p><b>注释：</b>由于链接的目标匹配 iframe 的名称，所以链接会在 iframe 中打开。</p>
+        <script type="text/javascript">
+            document.write("<h1>Hello World!</h1>")
+        </script> 
+        <noscript>Sorry, your browser does not support JavaScript!</noscript>
+        <p>不支持 JavaScript 的浏览器将显示 noscript 元素中的文本。</p>
+        <form>
+
+            账号:<br>
+            <input type="text" name="user" value="123" readonly>
+            <br>
+            密码:<br>
+            <input type="password" name="password" value="000" readonly><br/>
+            <input type="submit" value="Submit"><br>
+            喜欢的活动：<br>
+            <input type="radio" name="" value="" checked>打篮球
+            <br>
+            <input type="radio" name="" value="">跑步<br/>
+            <select name="cars">
+                <option value="张三">张三</option>
+                <option value="李四">李四</option>
+                <option value="王五">王五</option>
+                <option value="赵六">赵六</option>
+            </select>
+            <input type="number" name="quantity" min="1" max="5">
+            <input type="submit">
+        </form> 
+        <table border="1">
+            <tr>
+                <td class="test1">
+                    这个表格单元的每个边拥有相等的内边距。
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table border="1">
+            <tr>
+                <td class="test2">
+                    这个表格单元的上和下内边距是 0.5cm，左和右内边距是 2.5cm。
+                </td>
+            </tr>
+        </table>
+        <p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+        <input id="demo" type="text">
+        <script>
+            function myFunction()
+            {
+                /* x = document.getElementById("demo");  // 找到元素
+                 x.innerHTML = "Hello JavaScript!";    // 改变内容*/
+                var x = document.getElementById("demo").value;
+                if (x == "" || isNaN(x))
+                {
+                    alert("您输入的不是数字");
+                }
+            }
+        </script>
+        <button type="button" onclick="myFunction()">点击这里</button>
+        <p>点击这个按钮，看一看JS。</p>
+
+        <button onclick="myFunction('Bill Gates', 'CEO')">点击这里</button>
+
+        <script>
+            function myFunction(name, job)
+            {
+                alert("Welcome " + name + ", the " + job);
+            }
+        </script>
+    </body>
+</html>

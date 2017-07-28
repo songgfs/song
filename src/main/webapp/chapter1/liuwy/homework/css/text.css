@@ -1,0 +1,88 @@
+/* CSS Document */
+
+.bg{
+	width:900px; margin:0 auto;
+	text-align:center;
+	background-color:rgba(255,255,255,0.6);}
+
+
+
+/* login */
+	.cter{
+	text-align: center;
+	color: #d90a81;
+	font-family: STCaiyun;
+	}
+.clor{
+	color:#FCC
+	}
+
+	
+#tab{
+	background-image:url(images/513ac042t5fb1f55826b6.jpg)
+	}
+
+a:link {
+	color: #000;
+	font-family: "微软简中圆";
+	font-size: 18px;
+}     /* 未访问的链接 */
+a:visited {color:#976080}  /* 已访问的链接 */
+a:hover {color:#9F9F9F;
+ font-size:19px}    /* 当有鼠标悬停在链接上 */
+a:active {
+	color: #333;
+	font-family: "楷体";
+	font-size: 18px;
+	font-style: italic;
+}   /* 被选择的链接 */
+.ap1 {
+	float:left; margin-top:50px; margin-left:25px;
+}
+#apDiv2 {
+	position: relative;
+	width: 5px;
+	height: 130px;
+	z-index: 1;
+	left: 550px;
+	top: -190px;
+}
+#apDiv1 {
+	position: absolute;
+	width: 344px;
+	height: 50px;
+	z-index: 1;
+	left: 576px;
+	top: 412px;
+	background-color: rgba(0,0,0,0.5);
+	color:#FFF;
+}
+/* regist.html*/
+.inp {
+				height: 20px;
+				margin: 0 auto;
+				margin-bottom: 20px;
+				width: 400px;
+			}
+			#a{
+				text-align:center}
+				
+				
+/*post.html 评论页面*/
+
+
+
+
+/* person.html我的主页*/
+.bc{
+	background-color: #FFFBFF;	
+	}
+.biaoti{
+	text-align:left;
+	font-size:20px;
+	color:#566A42;
+	font-family:"楷体";
+	width:200px;
+	}
+	
+	

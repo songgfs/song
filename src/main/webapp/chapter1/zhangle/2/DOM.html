@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<style type="text/css">
+			#head{
+				margin-left:10%;
+				margin-right:20%;
+				margin-top:5%;				
+				border-style:solid;
+				border-width: 1px ;
+				height:100px;
+				
+			}		
+			#content{
+				padding:10px;
+				margin-left:10%;
+				margin-right:20%;
+				border-style:solid;
+				border-width: 1px ;
+				height:60%;
+			}
+		</style>
+	</head>
+	<body >
+		<div id="head">
+			<h3 id="h" >改变元素样式
+				<button onclick="document.getElementById('h').style.color='gray'";>改变</button>
+			</h3>
+			
+			<h3 id ="two" onclick="this.innerHTML='已点击'" onmouseover="testone()" onmouseout="this.innerHTML='鼠标移开，请点击该文本';">请点击该文本</h3>
+		</div>
+		<div id="content">
+			<input id="Button" type="button" onclick="testbutton()" value="添加段落" />
+		</div>
+		<script>
+			//document.getElementById("h").style.color="gray";//改变h3元素的样式
+			function testone(){
+				document.getElementById("two").innerHTML="鼠标移上";
+			}
+			function testbutton(){
+				var p=document.createElement("p");
+				var text=document.createTextNode("添加段落");
+				p.appendChild(text);
+				var content=document.getElementById("content");
+				content.appendChild(p);
+				}
+		</script>
+	
+	</body>
+</html>

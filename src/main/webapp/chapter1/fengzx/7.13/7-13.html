@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>冯朝霞7.13作业</title>
+</head>
+
+<body onload="startTime()">
+<h1 id="h1" align="left">DOM</h1>
+<p id="p1">Hello!</p>
+<button type="button" onclick="document.getElementById('p1').style.color='red'">Click!</button>
+
+<p>今天开心吗？（yes/no）
+<br /><input type="text" id="t1" onfocus="text1(this)" onchange="text2()"></p>
+
+<div onmouseover="mouseover(this)" onmouseout="mouseout(this)" onmousedown="mousedown(this)" onmouseup="mouseup(this)" style="background-color:#0FF;color:#000;width:100px;higeht:20px;padding:50px;">这是蓝色</div>
+<div id="txt"></div>
+
+<script type="text/javascript">
+document.write("<p>今天的日期是：</p>"+Date());
+document.getElementById("h1").align="center";
+
+function Dialog(){
+	alert("Welcome to here!");
+}
+
+function text1(x){
+	x.style.background="#0FF";
+}
+function text2(){
+	x=document.getElementById("t1");
+	x.value=x.value.toUpperCase();
+}
+
+function mouseover(obj){
+	obj.style.backgroundColor="red";
+	obj.innerHTML="这是红色"
+	}
+function mouseout(obj){
+	obj.style.backgroundColor="#0FF";
+	obj.innerHTML="这是蓝色"
+    }
+function mousedown(obj){
+	obj.style.backgroundColor="yellow";
+	obj.innerHTML="这是黄色"
+	}
+function mouseup(obj){
+	obj.style.backgroundColor="green";
+	obj.innerHTML="这是绿色"
+	}
+ 
+function data(date,week){
+	this.date=date;
+	this.week=week;
+}
+today=new data("2017.7.13","星期四");
+document.write("<br>"+today.date+"是"+today.week + "<br />");
+
+var str="Today is Thursday."
+document.write("Today is Thursday.Hello world!" + "<br />")
+document.write("Thursday第一次出现的位置是："+str.indexOf("Thursday") + "<br />")
+document.write("返回值是："+str.match("Today") + "<br />")
+document.write(str.replace(/is/,"was") + "<br />")
+var d=new Date()
+var today=new Date()
+d.setFullYear(2007,6,13)
+document.write("我想回到"+d + "<br />")
+document.write (d.toUTCString() + "<br />")
+
+function startTime(){
+	var today=new Date()
+	var h=today.getHours()
+	var m=today.getMinutes()
+	var s=today.getSeconds()
+	m=checkTime(m)
+	s=checkTime(s)
+	
+	document.getElementById('txt').innerHTML="现在的时间是："+h+":"+m+":"+s
+	t=setTimeout('startTime()',500)
+}
+
+function checkTime(i){
+	if (i<10){
+		i="0" + i
+	}
+	return i
+}
+
+function sortNumber(a, b)
+{
+return a - b
+}
+
+/*
+if (d>today){
+	alert("今天比2007年7月13日早");
+	}else{
+	alert("今天比2007年7月13日晚");
+}
+*/
+
+var array1 = new Array()
+array1[0] = "array1的第一元素"
+array1[1] = "array1的第二元素"
+array1[2] = "array1的第三元素"
+
+var array2 = new Array()
+array2[0] = "array2的第1元素"
+array2[1] = "array2的第2元素"
+array2[2] = "array2的第3元素"
+
+var array3 = new Array()
+array3[0] = "10"
+array3[1] = "5"
+array3[2] = "40"
+array3[3] = "25"
+array3[4] = "1000"
+array3[5] = "1"
+
+for (i=0;i<array1.length;i++)
+{
+document.write(array1[i] + "<br />")
+}
+
+for (i in array1)
+{
+document.write(array1[i] + "<br />")
+}
+
+document.write(array1.concat(array2) + "<br />")
+
+document.write(array1.join(".") + "<br />")
+
+document.write(array2.sort() + "<br />")
+
+document.write(array3.sort(sortNumber) + "<br />")
+</script>
+
+</body>
+</html>

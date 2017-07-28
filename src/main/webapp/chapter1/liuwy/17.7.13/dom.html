@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>dom 学习</title>
+<script type="text/javascript">
+function accesskey()
+{
+document.getElementById('begin').accessKey="b"
+document.getElementById('javascript').accessKey="j"
+}
+function whichButton(event)
+{
+var btnNum = event.button;
+if (btnNum==2)
+  {
+  alert("您点击了鼠标右键！")
+  }
+else if(btnNum==0)
+  {
+  alert("您点击了鼠标左键！")
+  }
+else if(btnNum==1)
+  {
+  alert("您点击了鼠标中键！");
+  }
+else
+  {
+  alert("您点击了" + btnNum+ "号键，我不能确定它的名称。");
+  }
+}
+function show_coords(event)
+{
+x=event.clientX
+y=event.clientY
+alert("X 坐标: " + x + ", Y 坐标: " + y)
+}
+</script>
+<style>
+a{ color:#6C3}
+</style>
+</head>
+
+<body onload="accesskey()" onmousedown="show_coords(event)">
+<a>向超链接添加快捷键</a>
+<p><a id="begin" href="../begin.html" style="color:#000">begin</a> （请使用 Alt + b给该链接赋予焦点）</p>
+<p><a id="javascript" href="../javascript.html" style="color:#000">javascript</a> （请使用 Alt + j 为该链接赋予焦点）</p><br /><hr />
+<a>返回该文档的标题</a><br />
+该文档的标题是：
+<script type="text/javascript">
+document.write(document.title)
+</script><br /><hr />
+<a>返回该文档的URL</a><br />
+该文档的URL是：
+<script type="text/javascript">
+document.write(document.URL)
+</script><br /><hr />
+<a>返回该文档的referrer</a><br />
+该文档的referrer是：
+<script type="text/javascript">
+document.write(document.referrer)
+</script><br /><hr />
+<a>返回该文档的域名</a><br />
+该文档的域名是：
+<script type="text/javascript">
+document.write(document.domain)
+</script><br /><hr />
+<a>返回该文档中的锚数目</a><br />
+<a name="first">第一个锚</a><br />
+<a name="second">第二个锚</a><br />
+<a name="third">第三个锚</a><br />
+<br />
+
+文档中锚的数目：
+<script type="text/javascript">
+document.write(document.anchors.length)
+</script><br /><hr />
+<a>计算文档中的图片数目</a><br />
+<img src="../images/莲花.png" width="200" height="200" /><img src="../images/无标题.png" width="200" height="200" /><br />
+<script type="text/javascript">
+document.write("本文档包含：" + document.images.length + " 幅图像。")
+</script><br /><hr />
+<div style="border-left-color: #F66; border-bottom-color: #F66; border-right-color: #F66; border-top-color: #F66; background-color: #F36; height: 200px; width: 300px" onmousedown="whichButton(event)">在此区域点击鼠标，一个消息框会提示出您点击了哪个鼠标按键。</div><br /><hr />
+点击文档中任何位置，提示你点击的x,y坐标。<br /><hr />
+</body>
+</html>

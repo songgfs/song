@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>dcomment</title>
+<style type="text/css">
+.comment{
+	text-align:center;
+}
+div p{
+	text-align:left;
+	font-family:华文楷体;
+	font-size:24px;
+}
+</style>
+<script>
+function post(){
+	x=document.getElementById("comment").value
+	if(x==null||x==""){
+		alert("请输入回复内容！")
+		}else{
+			var para=document.createElement("p");
+			var para1=document.createElement("div");
+			var node=document.createTextNode(x);
+			para.appendChild(node);
+			alert("回复成功！")
+			document.getElementById("comment").value="";
+			
+			var para2=document.createElement("button");
+			para2.onclick=function del(){
+				var parent=document.getElementById("text");
+				parent.removeChild(this.parentNode);
+				alert("删除成功！");
+				};
+			var para3=document.createElement("hr");
+			var para4=document.createElement("br");
+			para2.style.cssFloat="right";
+			para2.style.color="red";
+			var node2=document.createTextNode("删除");
+			
+			para2.appendChild(node2);
+			
+			var element=document.getElementById("text");
+			para1.appendChild(para);
+			para1.appendChild(para3);
+			para1.appendChild(para4);
+			para1.appendChild(para2);
+			element.appendChild(para1);
+		}
+}
+			
+</script>
+</head>
+
+<body>
+<div class="comment">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;评论区：</p>
+<div id="text"></div>
+<br /><br /><br />
+<div>
+<textarea id="comment" cols="60" rows="10"></textarea><br /><br />
+<input name="input" type="button" value="提交回复" onclick="post()" />
+</div>
+</div>
+</body>
+</html>

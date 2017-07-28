@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>用户个人信息</title>
+        <link rel="stylesheet" type="text/css" href="styles/headStyles.css">
+        <link rel="stylesheet" type="text/css" href="styles/person.css">
+        <script type="text/javascript" src="JS/regist.js" ></script>
+    </head>
+    <body>
+        <div class="head">
+            <a  href="Index.html"><img src="img/logo.png" /></a>
+            <div class="select">
+                <ul class="level1">
+                    <li><a href="Index.html">首页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="leftpart">
+            <h3>选项列表：</h3>
+            <ul id="one">
+                <li onclick="lookFunction()">查看/完善个人信息</li>
+                <li>好友列表</li>
+                <ul>
+                    <li onclick="oneFunction()">one</li>
+                    <li onclick="oneFunction()">two</li>
+                    <li onclick="oneFunction()">three</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="rightpart" >
+        <!--style="display: none"-->
+        <div id="edit"  style="display:none">
+            <h3>修改个人信息：</h3><hr />
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td>用户名:</td><td><input type="text" value="zhangle" /></td>
+                    </tr>
+                    <tr>
+                        <td>昵称:</td><td><input type="text" maxlength="20" /></td>
+                    </tr>
+                    <tr>
+                        <td>生日:</td><td><input type="date" /></td>
+                    </tr>
+                    <tr>
+                        <td>职业:</td>
+                        <td>
+                            <select>
+                                <option>学生</option>
+                                <option>教师</option>
+                                <option>程序员</option>
+                                <option>其他</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" id="button" onclick="makesure()" style=" text-align: center" value="确认" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+
+    </div>
+    </body>
+
+
+</html>

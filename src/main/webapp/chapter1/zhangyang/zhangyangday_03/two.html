@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>two.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+</head>
+
+<body>
+	<h2>button对象</h2>
+	返回一个button的type
+	<br>
+	<button name="button" id="myButton" type="button" onclick="alertType()">点我!</button>
+	<br>
+	<script>
+		function alertType() {
+			alert(document.getElementById("myButton").type);
+		}
+	</script>
+	返回一个按钮的value
+	<br>
+	<input type="button" id="button1" value="点我!">
+	<p>
+		按钮的value:
+		<script>
+			document.write(document.getElementById("button1").value);
+		</script>
+	<h2>form对象</h2>
+	<p>按钮重置表单</p>
+	<form id="frm1">
+		用户名: <input type="text" name="fname"><br> 
+		密码: <inputtype="text" name="lname"><br> <br> <input
+			type="button" onclick="formReset()" value="重置表单">
+	</form>
+	<script>
+		function formReset() {
+			document.getElementById("frm1").reset();
+		}
+	</script>
+	<p>按钮提交表单</p>
+	<form id="frm1" action="three.html">
+		账号: <input type="text" name="fname"><br> 
+		密码: <input type="text" name="lname"><br> <br> <input
+			type="button" onclick="formSubmit()" value="提交表单">
+	</form>
+	<script>
+		function formSubmit() {
+			document.getElementById("frm1").submit();
+		}
+	</script>
+	<a href="three.html">下一个对象</a>
+</body>
+</html>

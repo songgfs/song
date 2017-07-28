@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/temple.css">
+    <link rel="stylesheet" type="text/css" href="css/xyjym.css">
+    <script type="text/javascript">
+        window.onload = function() {
+            var btn = document.querySelector('input');
+            var text = document.querySelector('textarea');
+            var list = document.querySelector('#list');
+            var colors = [ "red", "pink" ];
+            var nub = 0;
+            btn.onclick = function() {
+                if (text.value.trim() == "") {
+                    alert("您还没有评论");
+                    return false;
+                }
+                var li = document.createElement("li");
+                li.innerHTML = text.value;
+                // li.className = colors[nub%colors.length];
+                /* 判断a标签已经被添加，就让a标签显示出来，否则就添加 */
+                if (list.children[0] && list.children[0].className == "red") {
+                    li.className = "pink";
+                } else {
+                    li.className = "red";
+                }
+                var a = null;
+                li.onmouseover = function() {
+                    if (a) {
+                        a.style.display = "block";
+                    } else {
+                        a = document.createElement("a");
+                        a.href = "javascript:;";
+                        a.className = "clos";
+                        a.innerHTML = "删除";
+                        a.onclick = function() {
+                            list.removeChild(this.parentNode);
+                        };
+                        this.appendChild(a);
+                    }
+                };
+                li.onmouseout = function() {
+                    a.style.display = "none";
+                };
+                list.insertBefore(li, list.children[0]);
+                text.value = "";
+                nub++;
+            };
+        };
+    </script>
+</head>
+
+<body>
+<!--顶部 B-->
+<div class="top">
+    <div class="center top_c">
+        你好~
+    </div>
+</div>
+<!--顶部 E-->
+<!--logo B-->
+<div class="logo">
+    <div class="center l_c">
+        <div class="l_left">
+            <h1>
+                <a href="#">QZLT</a>
+            </h1>
+        </div>
+        <!--logo完成-->
+    </div>
+</div>
+<!--logo E-->
+<!--内容 B-->
+<div class="forum">
+    <div class="d_middle">
+
+        <ul>
+            <p>
+            <li>《红楼梦》</li>
+            <li>曹雪芹</li>
+            </p>
+            <li>&nbsp;&nbsp;《红楼梦》讲述的是发生在一个未知朝代的封建大家庭中的人事物,其中以贾宝玉,林黛玉,薛宝钗</li>
+            <li>三个人之间的感情纠葛为主线通过对一些日常事件的描述体现了在贾府的大观园中以金陵十二钗为</li>
+            <li>主体的众女子的爱恨情愁.而在这同时又从贾府由富贵堂皇走向没落衰败的次线反映了一个大家族的</li>
+            <li>没落历程和这个看似华丽的家族的丑陋的内在。</li>
+            <li>说的主要倾向,在罗贯中时代隐含着人民对汉族复兴的希望。</li>
+        </ul>
+    </div>
+</div>
+
+<!--内容 E-->
+<div>
+    <div class="wrap">
+        <textarea id="text"></textarea>
+        <input type="button" value="添加评论">
+        <ul id="list"></ul>
+    </div>
+</div>
+<!--底部 B-->
+<div class="foot">
+    <div class="center">
+        <div class="f_left">测试 测试 </div>
+    </div>
+</div>
+<!--底部 E-->
+</body>
+
+</html>

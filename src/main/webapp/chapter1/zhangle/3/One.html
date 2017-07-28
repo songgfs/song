@@ -1,0 +1,102 @@
+﻿<html>
+	<head>
+		<title>JS小练习</title>
+		<style>
+			.head{
+				margin-left:20%;
+				margin-right:20%;
+				margin-top:5%;				
+				border-style:solid;
+				border-width: 1px ;
+				height:80px;
+				text-align:center;
+			
+			}
+			.one{
+				padding-left:10%;
+				margin-left:20%;
+				margin-right:20%;
+				border-style:solid;
+				border-width: 1px ;
+				height:60%;
+			}
+			#two{
+				padding-left:20%;
+			
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div class="head">
+			<h3>DOM节点/事件/验证</h3>
+		</div>
+		<div class="one">
+			
+			<form action="" method="post" name="form">
+				<table id="te" >
+					<tr >
+						<td>员工名:<input type="text" name="user" required onblur="check()" />电码:<input type="text" name="tel" onblur="check()" required /><br /></td>
+					
+					</tr>
+					
+				</table>
+			<div id="two">
+				<input style="margin-right:10%; float:left;" type="button" id="add"  value="添加员工" onclick="addNode()" />
+				&nbsp;&nbsp;&nbsp;<input  style="float:left;" type="button" value="删除员工" onclick="removeUs()" />	
+			</div>
+			</form>	
+		</div>
+		<script type="text/javascript">
+			function addNode(){
+				var n1=document.createTextNode("员工名:");
+				var it=document.createElement('input');
+				it.setAttribute('type', 'text');
+				it.setAttribute('onblur', 'check()');
+				var n2=document.createTextNode("电话:");
+				var tell=document.createElement('input');
+				tell.setAttribute('type', 'text');
+				tell.setAttribute('onblur', 'check()');
+				var t=document.createElement('tr');
+				t.setAttribute('id','tri');
+				var d=document.createElement('td');
+				t.appendChild(d);
+				d.appendChild(n1);
+				d.appendChild(it);
+				d.appendChild(n2);
+				d.appendChild(tell);
+				var ta=document.getElementById("te");
+				ta.appendChild(t);
+				
+				
+				
+			
+			}
+			function removeUs(){
+				var t=document.getElementById("te");
+				var tr=document.getElementById("tri");
+				t.removeChild(tr);
+				
+			}
+			function check(){
+				
+				var name = /^[\u4E00-\u9FA5|a-zA-Z]{1,6}$/;
+				var tell = /^[1-9]\d{10}$/;
+				if(!name.test(document.form.user.value)) {
+					  alert('请填写中文或英文1到6个且中间不能有空格');
+				}
+				
+				if(!tell.test(document.form.tel.value)) {
+				 	 alert('请填写正确电话号码!!');
+				}
+				
+				//alert(document.form.tel.value);
+				
+			}
+		
+		
+		</script>
+				
+	</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>董稳超作业</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            header {
+                background-color:lavender;
+                color: white;
+                text-align: center;
+                padding:20px;
+            }
+            table {
+                position: absolute;
+                top:300px;
+                left:700px;
+                float:right;
+                padding:30px;
+            }
+            nav {
+                line-height:100px;
+                background-color:azure;
+                height:410px;
+                width:150px;
+                float:left;
+                padding:5px;
+            }
+        </style>
+        <style>
+            tu{
+                display:block;
+                bottom:50px;
+                left:1200px;
+                position:fixed;
+                border:1px solid #fff;
+                text-align:center;
+            }
+        </style>
+        <style>
+            p{
+                font-weight: bold;
+                font-size:40px;
+                color: darkmagenta;
+            }
+        </style>
+    </head>
+    <body >
+        <header>
+            <p>作业展示,请登录！</p>
+        </header>
+        <form action="zhuye.html" method="post">
+            <table border="0" bgcolor="lavender">
+                <tr>
+                    <td align="center">
+                        账号：<input type="text" id="user" value="" size="16"/><br><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                         密码：<input type="password" id="password" required value="" size="16"/><br/><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <input type="checkbox" name="rem" id="rem"/>记住密码  忘记密码</td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <input type="submit" value="登录" style="width: 30%;height: 30px" onclick="return myFunction()" />
+                        <input type="button" value="注册" style="width: 30%;height: 30px" onclick="register()">
+                        <!--<a href="register" input type="submit" >注册</a>-->
+                        <!--<button> <a href="register.html">注册</a></button>-->
+                    </td>
+                </tr>
+                <tu>
+                    <img src="../day03/xiayiye.png" widht="300" height="100" />
+                </tu>
+                <nav>
+                    <h2>提示：</h2>
+                    <h2 ><b>账号：123</b></h2>
+                    <h2>密码：000</h2>
+                </nav>
+            </table>
+            <script>
+                function myFunction() {
+                    var user = document.getElementById("user").value;//username为id值
+                    var password = document.getElementById("password").value;//document是一个HTML
+                    if (user == 123 && password == 000) {
+                        return true;
+                    } else {
+                        alert("请输入正确的账号和密码！")
+                        return false;
+                    }
+                }
+            </script>
+            <script>
+                function register()
+                {
+                    window.location.href="register.html";
+                }
+            </script>
+        </form>
+    </body>
+</html>

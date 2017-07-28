@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="pic/favicon.ico" />
+<title>用户注册</title>
+<style type="text/css">
+a:link,
+a:visited{
+color:#C06;
+text-decoration:none;}
+a:hover,
+a:active{
+color:#F00;
+text-decoration:none;}
+
+#header {
+	background-image: url(pic/title1.png);
+	background-position: center center;
+	overflow: hidden;
+	text-align: center;
+}
+#container {
+	text-align: center;
+    background-color:#fff;
+	border: thin solid #fcfcfc;
+	margin-top: 5%;
+	margin-right: 25%;
+	margin-bottom: 5%;
+	margin-left: 25%;
+    border-radius:20px;
+}
+
+.loginBg {
+    background-color:#E6CAFF;
+	border: thin solid #fcfcfc;
+	margin-top: 5%;
+	margin-right: 10%;
+	margin-bottom: 0%;
+	margin-left: 10%;
+    border-radius:10px;
+}
+
+</style>
+
+ <script>
+ 
+ function name(){
+	 x=document.getElementById("name").value
+	 y=document.getElementById("nam")
+	 if(x==""||x==null){
+		 y.innerHTML="请输入姓名！"
+		 y.style.color="#F00"
+		 }else{
+			 y.innerHTML="输入正确！"
+			 y.style.color="#33CC33";
+			 }
+ }
+ function username(){
+	 name();
+	 x=document.getElementById("username").value
+	 y=document.getElementById("user")
+	 if(x==""||x==null||x.length<3||x.length>8){
+		 y.innerHTML="账户名长度不合格！"
+		 y.style.color="#F00"
+		 }else{
+			 y.innerHTML="输入正确！"
+			 y.style.color="#33CC33";
+			 }
+ }
+  function password(){
+	  name();
+	  username();
+	  x=document.getElementById("password").value
+	  y=document.getElementById("pass")
+	  if(x==""||x==null||x.length<6){
+		  y.innerHTML="设置密码不少于六个字符！"
+		  y.style.color="#F00"
+		  }else{
+			  y.innerHTML="输入正确！"
+			  y.style.color="#33CC33";
+			  }
+  }
+   function emaildress(){
+	   name();
+	   username();
+	   password();
+	   x=document.getElementById("emaildress").value
+	   y=document.getElementById("email")
+	   if (x.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1){
+		   y.innerHTML="输入正确！"
+		   y.style.color="#33CC33";
+		   alert("注册成功！")
+		   window.open('index.html')
+		   }else{
+			   y.innerHTML="邮箱格式输入不正确！"
+			   y.style.color="#F00"
+			   }
+   }
+
+	</script>
+</head>
+
+<body style="background-image: url(pic/title2.png)">
+<div id="header">
+  <h1>畅所欲言<br>
+    Speaking everything you want!</h1>
+</div>
+<div id="container">
+  <div class="loginBg">
+      <div class="row" style="background-image: url(pic/title2.png); color: #FF3399; height: 50px; vertical-align: center; font-family: 'Comic Sans MS', cursive; font-size: 18px;">
+        <h1>请输入您的个人信息</h1>
+      </div><br />
+      <div class="row">
+        <label>姓名：</label>
+        <input type="text" id="name" placeholder="请输入您的姓名"/>
+        <div id="nam"></div>
+      </div><br />
+      <div class="row">
+        <label>账户：</label>
+        <input type="text" id="username" placeholder="请输-入3-8个英文字母" onclick="name()"/>
+        <div id="user"></div>
+      </div><br />
+      <div class="row">
+        <label>密碼：</label>
+        <input type="password" id="password" placeholder="请设置您的登录密码" onclick="username()"/>
+        <div id="pass"></div>
+      </div><br />
+      <div class="row">
+        <label>邮箱：</label>
+        <input type="text" id="emaildress" placeholder="请设置您的绑定邮箱" onclick="password()"/>
+        <div id="email"></div>
+      </div><br />
+      
+      <div class="row">
+        <input type="submit" value="注册" style="width:80px" onclick="emaildress	()"/>
+      </div>
+      <div class="row" style="height:20px;"></div>
+      <div class="row" style="font-family:楷体;">已有账户?&nbsp;&nbsp;<a href="login.html" target="_blank"><span>登录</span></a></div><br />
+      
+  </div>
+  <div class="row"><p><small>&copy; 版权所有&nbsp;盗版必究</small></p></div>
+</div>
+<p>&nbsp;</p>
+</body>
+</html>

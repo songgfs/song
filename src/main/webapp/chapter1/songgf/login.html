@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset="UTF-8" />
+	<title>html登录</title>
+	
+	<script type="text/javascript">
+		function check(s){
+			var username=document.getElementById("username").value;
+			var password=document.getElementById("password").value;
+			if(username.trim()==''){
+				document.getElementById("username_msg").style.display = "inline";
+				document.getElementById("username").focus(); 
+				return false;
+			}
+			if(password.trim()==''){
+				document.getElementById("password_msg").style.display = "inline";
+				document.getElementById("password").focus();
+				return false;
+			}
+			if(s=='s1'){
+				alert("登录成功");
+			}else{
+				alert("注册成功");
+			}
+			document.getElementById("form1").submit();
+		}
+		function msg_hidden(msg){//当输入数据时将提示隐藏
+			document.getElementById(msg+"_msg").style.display = "none";
+		}
+	</script>
+	<style type = "text/css">
+		body{
+			margin:0px;
+			padding:0px;
+		}
+		#top{
+			width:auto;
+			padding-top:20px;
+			padding-bottom:30px;
+			padding-left:30px;
+			padding-right:20px;
+			margin:20px 20px 20px 50px;
+		}
+		#buttom{
+			width:auto;
+			padding-top:20px;
+			padding-bottom:30px;
+			padding-left:30px;
+			padding-right:20px;
+			margin:20px 20px 20px 50px;
+		}
+		#center{
+			width:auto;
+			border-top:1px solid #ccc;
+			padding-top:5px;
+			padding-bottom:10px;
+			padding-right:20px;
+			margin:20px 20px 20px 50px;
+		}
+		#left {
+			width:400px;
+			margin-left:5px;
+			padding-top:20px;
+			float:left;
+		}
+		#divcenter {
+			width:400px;
+			margin-left:20px;
+			border-top:1px solid #ccc;
+			padding-top:20px;
+			float:left;
+		}
+		#right {
+			width:400px;
+			margin-left:20px;
+			padding-top:20px;
+			float:left;
+		}
+	</style>
+</head>
+<body>
+	<div id="top">
+		<div style="margin-rigth:10px;float:right">
+			<td>
+				<tr><a href="main.html">首页</a></tr>
+				<tr><a href="">登录</a></tr>
+				<tr><a href="">注册</a></tr>
+			</td>
+		</div>
+	</div>
+	<div id = "center" style="width:auto;height:300px">
+		<div id="left">
+		</div>
+		<div id="divcenter">
+			<form  id="form1"  action="main.html" method="post">
+				账号：<input type="text" id="username" onkeydown = "msg_hidden('username')"/>
+				<span id = "username_msg" style = "color:red;display:none;">账号必填</span><br /><br />
+				密码：<input type="password" id="password" onkeydown = "msg_hidden('password')"/>
+				<span id = "password_msg" style = "color:red;display:none;">密码必填</span><br/><br/>
+					  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					  <input id = "" type="button"  value="登录" onclick = "check('s1')"/>&nbsp;&nbsp;
+					  <input id = "" type="button"  value="注册" onclick = "check('s2')"/>&nbsp;&nbsp;
+			</form>
+		</div>
+		<div id="right">
+		</div>
+	</div>
+	<div id="buttom"></div>
+</body>
+</html>

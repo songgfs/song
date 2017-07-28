@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>改变HTML的图像</title>
+</head>
+
+<body>
+
+<h3>点击以改变图片</h3>
+
+<img id="image" onclick="changeImage()" src="壁纸1.jpg">
+
+<script>
+function changeImage()
+{
+element=document.getElementById('image')
+if (element.src.match("壁纸2"))
+  {
+  element.src="壁纸1.jpg";
+  }
+else
+  {
+  element.src="壁纸2.jpg";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/temple.css">
+    <link rel="stylesheet" type="text/css" href="css/xyjym.css">
+    <script type="text/javascript">
+        window.onload = function() {
+            var btn = document.querySelector('input');
+            var text = document.querySelector('textarea');
+            var list = document.querySelector('#list');
+            var colors = [ "red", "pink" ];
+            var nub = 0;
+            btn.onclick = function() {
+                if (text.value.trim() == "") {
+                    alert("您还没有评论");
+                    return false;
+                }
+                var li = document.createElement("li");
+                li.innerHTML = text.value;
+                // li.className = colors[nub%colors.length];
+                /* 判断a标签已经被添加，就让a标签显示出来，否则就添加 */
+                if (list.children[0] && list.children[0].className == "red") {
+                    li.className = "pink";
+                } else {
+                    li.className = "red";
+                }
+                var a = null;
+                li.onmouseover = function() {
+                    if (a) {
+                        a.style.display = "block";
+                    } else {
+                        a = document.createElement("a");
+                        a.href = "javascript:;";
+                        a.className = "clos";
+                        a.innerHTML = "删除";
+                        a.onclick = function() {
+                            list.removeChild(this.parentNode);
+                        };
+                        this.appendChild(a);
+                    }
+                };
+                li.onmouseout = function() {
+                    a.style.display = "none";
+                };
+                list.insertBefore(li, list.children[0]);
+                text.value = "";
+                nub++;
+            };
+        };
+    </script>
+</head>
+
+<body>
+<!--顶部 B-->
+<div class="top">
+    <div class="center top_c">
+        你好~
+    </div>
+</div>
+<!--顶部 E-->
+<!--logo B-->
+<div class="logo">
+    <div class="center l_c">
+        <div class="l_left">
+            <h1>
+                <a href="#">QZLT</a>
+            </h1>
+        </div>
+        <!--logo完成-->
+    </div>
+</div>
+<!--logo E-->
+<!--内容 B-->
+<div class="forum">
+        <div class="d_middle">
+
+            <ul>
+                <p>
+                <li>《西游记》</li>
+                <li>吴承恩</li>
+                </p>
+                <li>&nbsp;&nbsp;《西游记》是一部中国古典神魔小说，为中国“四大名著”之一。书中讲述唐朝法师西天取经</li>
+                <li>的故事，表现了惩恶扬善的古老主题。《西游记》成书于16世纪明朝中叶，自问世以来在中国及世</li>
+                <li>界各地广为流传，被翻译成多种语言。西游记是中国古典四大名著之一，是最优秀的神话小说，也</li>
+                <li>是一部群众创作和文人创作相结合的作品。小说以整整七回的“大闹天宫”故事开始，把孙悟空的</li>
+                <li>形象提到全书首要的地位。第八至十二回写如来说法，观音访僧，魏徵斩龙，唐僧出世等故事，交</li>
+                <li>待取经的缘起。从十四回到全书结束，写孙悟空被迫皈依佛教，保护唐僧取经，在八戒、沙僧协助</li>
+                <li>下，一路斩妖除魔，到西天成了“正果”。</li>
+            </ul>
+        </div>
+    </div>
+
+<!--内容 E-->
+<div>
+    <div class="wrap">
+        <textarea id="text"></textarea>
+        <input type="button" value="添加评论">
+        <ul id="list"></ul>
+    </div>
+</div>
+<!--底部 B-->
+<div class="foot">
+    <div class="center">
+        <div class="f_left">测试 测试 </div>
+    </div>
+</div>
+<!--底部 E-->
+</body>
+
+</html>

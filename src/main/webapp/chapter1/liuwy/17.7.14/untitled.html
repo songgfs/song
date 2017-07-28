@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+function change(){
+	x=document.getElementById("change")
+x.value=x.value.toUpperCase();}
+function bian(){
+	x=document.getElementById("bian")
+	x.innerHTML="真听话！"
+    x.style.color="#dddddd";
+	}
+function checkCookies()
+{
+if (navigator.cookieEnabled==true)
+	{
+	alert("已启用 cookie")
+	}
+else
+	{
+	alert("未启用 cookie")
+	}
+}
+function mOver(obj){
+	obj.innerHTML="谢谢！"
+	obj.style.backgroundColor="#dddddd"
+	
+	}
+	function mOut(obj){
+	obj.innerHTML="不客气！"
+	obj.style.backgroundColor="#aaccdd"
+	
+	}
+function mDown(obj){
+	obj.innerHTML="对不起！"
+	obj.style.backgroundColor="#aabb66"
+	}
+function mUp(obj){
+	obj.innerHTML="没关系！"
+	obj.style.backgroundColor="#aaccbb"
+	}
+
+</script>
+</head>
+
+<body onload="checkCookies()">
+<a>输入小写字母，离开文本框字母变成大写</a><br />Please input:<input  id="change"
+type="text" onchange="change()"/><br /><hr />
+<h1 id="bian" onclick="bian()">点我点我！</h1><hr>
+<p id="dian">点击下面按钮我会变！</p><br />
+<input type="button" value="隐藏文本" onclick="document.getElementById('dian').style.visibility='hidden'"/>
+<input type="button" value="显示文本" onclick="document.getElementById('dian').style.visibility='visible'"/><hr />
+<button  style=""onclick="document.getElementById('demo').innerHTML=Date()">点击这里</button><br />
+<p id="demo"></p>
+<hr />
+<a>提示浏览器是否启用cookies</a><hr />
+1.把鼠标移上去，移开鼠标发生两个事件；<br />
+2.点击鼠标松开鼠标发生两个事件。
+<div style="background-color:
+#63F; height:20px; width:120px; padding:40px ;text-align:center" onmouseover="mOver(this)" onmouseout="mOut(this)" id="mouse" onmousedown="mDown(this)" onmouseup="mUp(this)">把鼠标移到上面</div><br/><hr />
+<a>创建新的html元素</a><br />
+<div id="div1">
+<p id="p1">这是一个段落</p>
+<p id="p2">这是另一个段落</p>
+</div>
+
+<script>
+var para=document.createElement("p");
+var node=document.createTextNode("这是新段落。");
+para.appendChild(node);
+
+var element=document.getElementById("div1");
+element.appendChild(para);
+</script>
+<hr />
+<div id="div2">
+<p id="p1">这是一个段落。</p>
+<p id="p2">这是另一个段落。</p>
+<p id="p3">这是测试段落。</p>
+</div>
+
+<script>
+var parent=document.getElementById("div2");
+var child=document.getElementById("p3");
+parent.removeChild(child);
+</script>
+</body>
+</html>

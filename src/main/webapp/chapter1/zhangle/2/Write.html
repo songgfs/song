@@ -1,0 +1,112 @@
+﻿<html>
+	<head>
+		
+	
+	</head>
+	<body>
+		<h1 id="h1">how</h1>
+		<input type=button value="打开DOM界面窗口" onclick="open_win()" />
+		<br />
+		<script>
+			function open_win(){
+				window.open("DOM.html")
+			}
+		</script>
+		
+		<script>
+			alert(1);//弹窗输出
+			//document.write(2);//页面输出 不换行
+			//console.log(3);//控制台输出			
+			//document.getElementById("h1").innerHTML="how to what";//由id获取元素，替换内容
+			
+		</script>
+		<!--在head内无法运行，则在body内-->
+		<script>
+			a=10;b=3//全局变量方法内/外可调用
+			document.write(+a+" " +b+" <br />");//输出a b值10 3
+			function testH(){
+				document.getElementById("h1").innerHTML="what to how";
+				var c,d,e;//e未赋值则默认值undefined
+				c=a/b; //保留小数的商
+				d=a%b;//保留整数 求余的值
+				document.write(c+" "+d+" "+e+" <br />");
+				var st1="str";
+				var st2=0;
+				var st=st1+st2;
+				document.write(" "+st);//输出str0
+				var st;
+				document.write(" "+st);//输出str0
+				st=0;
+				document.write(" "+st+" <br />");//输出0
+				/*在方法内运行语句*/
+				if(a<10){
+					document.write(" "+a/b+" <br />");
+				}else document.write(" "+"a>=10"+" <br />");
+				
+				switch(b){
+					case 1: document.write("b=1"+" <br />"); break;
+					case 2: document.write("b=2"+" <br />"); break;
+					case 3: document.write(" "+"b=3"+" <br />"); break;//若去掉break会运行到下一个break结束
+					default: document.write("b!=1,2,3"+" <br />"); break;
+				
+				}
+								
+				while(b>0){
+					for(var i=0;i<b;i++){
+						document.write(" "+b+i+" ");//30 31 32//20 21//10
+					}
+					b--;//2 1 0
+					
+				}document.write(" <br />");
+									
+			}
+			testH();
+			document.write(" "+a+" " +b);//输出a b值10 0
+			document.write(" "+a+" " +b+" "+c);//c为局部变量方法外无法调用，整体不输出结果
+		</script>
+		<br />
+		<script>
+			var mes ="message";
+			var me=mes.toUpperCase();//方法
+			var ml=mes.length;//属性
+			document.write(me+" ");
+			document.write(ml+" <br />");
+			
+			//方法二：先创建对象构造器
+			function message(firstword,length){
+				this.firstword=firstword;
+				this.length=length;
+			
+			}	
+			//再创建新的对象实例		
+			var m=new message("m",7); 					
+			//for in循环
+			//var messages={firstword:"m",length:"7"};
+			for(x in m){
+				 text=m[x];	
+				document.write(text+" ");
+			}
+			document.write(" <br />");
+			//创建数组
+			function array(){
+				var arr=new Array();
+				arr[0]=11;
+				arr[1]=12;
+				
+				var arr=new Array(2);
+				arr[0]=11;
+				arr[1]=12;
+				
+				var arr=new Array(11,12);
+				document.write(arr[0]+" ");//访问数据
+				arr[0]=10;//修改数据
+				document.write(arr[0]+"<br /> ");
+			}	
+			array();
+			
+		</script>
+	
+	
+	
+	</body>
+</html>

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+    <head >
+        <title>论坛首页</title>
+        <link rel="stylesheet" type="text/css" href="styles/headStyles.css" />
+        <script type="text/javascript" src="JS/regist.js" ></script>
+    </head>
+    <body>
+        <div class="head">
+            <img src="img/logo.png" />
+            <div class="select">
+                <ul class="level1">
+                    <li><a href="#">首页</a></li>
+                    <li id="zhuce"><a href="regist.html">| 注册</a></li>
+
+                </ul>
+            </div>
+            <!--登录-->
+            <div class="login" id="login" style="display:block">
+                <div id="deng">
+                    <form action="" method="post">
+                        用户名:<input type="text" id="user" required maxlength="20" />
+                        密码:<input type="password" id="password" name="" required maxlength="16" />
+                        <input type="submit" id="button" value="登陆" onclick="test()" />
+                    </form>
+                </div>
+                <div id="person"  style="display:none">
+                    <a href="person.html">USER</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="content">
+            <table id="table">
+                <tr>
+                    <td id="tdleft">
+                        <table class="left">
+                            <tr>
+                                <td><a href="IndexSchool.html">校园时间</a><span>可去评论</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://bbs.tianya.cn/list-develop-1.shtml" target="main">经济交流</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://bbs.tianya.cn/list-170-1.shtml" target="main">职业交流</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://bbs.tianya.cn/list-feeling-1.shtml" target="main">情感天地</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://bbs.tianya.cn/list-play-1.shtml" target="main">游戏地带</a></td>
+                            </tr>
+                        </table>
+
+                    </td>
+                    <td id="tdright">
+                        <iframe name="main" src="http://www.hao123.com"></iframe>
+
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+
+    </body>
+
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>第三天学习</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>点击这个按钮，来调用带参数的函数。</p>
+        <button onclick="myFunction('董稳超', '程序员')">点击这里</button>
+        <script>
+            function myFunction(name, job)
+            {
+                alert("Welcome " + name + ", the " + job);
+            }
+        </script>
+        <p>如果时间是上班时间，会获得问候 "该下班了！"。</p>
+        <button onclick="myFunction1()">点击这里</button>
+        <p id="demo"></p>
+        <script>
+            function myFunction1() {
+                var x = new Date();
+                var time = x.getHours();
+                msg = ""
+                if (time > 8 && time < 11) {
+                    msg = "上班时间 加油";
+                } else if (time >= 11 && time <= 14) {
+                    msg = "下班ing"
+                } else if (time > 14 && time <= 18) {
+                    msg = "上班时间 加油";
+                } else if(time > 18) {
+                    msg = "下班ing";
+                }
+                document.getElementById("demo").innerHTML = msg;
+            }
+        </script>
+        <p>点击下面的按钮，会显示出基于今日日期的消息：</p>
+        <button onclick="myFunction2()">点击这里</button>
+        <p id="shijian"></p>
+        <script>
+            function myFunction2()
+            {
+                var x;
+                var d = new Date().getDay();
+                switch (d)
+                {
+                    case 6:
+                        x = "Today it's Saturday";
+                        break;
+                    case 0:
+                        x = "Today it's Sunday";
+                        break;
+                    default:
+                        x = "今天不是上面的两个时间";
+                }
+                document.getElementById("shijian").innerHTML = x;
+            }
+        </script>
+        <p>点击下面的按钮，将进行循环：</p>
+        <button onclick="myFunction3()">点击这里</button>
+        <p id="dianji"></p>
+        <script>
+            function myFunction3() {
+                cars = ["1", "dongwenchao", 2, "zhangyang"]
+                for (var i = 0; i < cars.length; i++)
+                {
+                    document.getElementById("dianji").innerHTML = cars;
+                }
+            }
+        </script>
+        <p>点击下面的按钮，循环遍历对象 "person" 的属性。</p>
+        <button onclick="myFunction4()">点击这里</button>
+        <p id="chaxun"></p>
+
+        <script>
+            function myFunction4()
+            {
+                var x;
+                var txt = "";
+                var person = {name: "董稳超", sex: "男", age: 21};
+                for (x in person)
+                {
+                    txt = txt + person[x];
+                }
+                document.getElementById("chaxun").innerHTML = txt;
+            }
+        </script>
+        <h1 id="header">dongwenchao</h1>
+        <p id="p1">Hello World!</p>
+        <script>
+            var element = document.getElementById("header");
+            element.innerHTML = "董稳超";
+            document.getElementById("p1").style.color = "red";
+        </script>
+        <p>" dongwenchao" 已被修改为 "董稳超"。</p>
+        <p>Hello World!已经被修改成红色</p>
+        <img id="image" src="../htmlday1/xiayiye.png" />
+        <script>
+            document.getElementById("image").src = "../htmlday1/zou.png";
+        </script>
+        <p>图片已经修改。</p>
+        <p>点击按钮来执行 <b>displayDate()</b> 函数。</p>
+        <button onclick="displayDate()">试一试</button>
+        <script>
+            function displayDate(id)
+            {
+                document.getElementById("id").innerHTML=Date();
+            }
+        </script>
+        <p id="id"></p>
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;">把鼠标移到上面</div>
+        <script>
+            function mOut(obj)
+            {
+                obj.innerHTML = "把鼠标移到上面"
+
+            }
+            function mOver(obj)
+            {
+                obj.innerHTML = "谢谢"
+            }
+        </script>
+        <div id="div1">
+            <p id="p1">这是一段</p>
+        </div>
+        <script>
+            var para = document.createElement("p");//这段代码创建新的 <p> 元素：
+            var node = document.createTextNode("这是新的一段");//如需向 <p> 元素添加文本，您必须首先创建文本节点。这段代码创建了一个文本节点：
+            para.appendChild(node);//然后您必须向 <p> 元素追加这个文本节点：
+            var element = document.getElementById("div1");//最后您必须向一个已有的元素追加这个新元素这段代码找到一个已有的元素：
+            element.appendChild(para);//这段代码向这个已有的元素追加新元素：
+        </script>
+        <p>验证compile()方法</p>
+        <script type="text/javascript">
+            var patt1 = new RegExp("超");
+            document.write(patt1.test("The best things in 超"));
+            patt1.compile("d");
+            document.write(patt1.test("The best things in dong"));
+            document.write("<br />");
+        </script>
+        <script>
+            function ChangeBackground() {
+                document.body.style.backgroundColor = "lavender";
+            }
+        </script>
+        <input type="button" onclick="ChangeBackground()" value="改变背景色" />
+        
+    </body>
+</html>

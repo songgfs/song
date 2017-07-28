@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>论坛首页</title>
+		<style type="text/css">
+			div.top{
+				width: 100%;
+				height: 150px;
+				
+				background-color:#6C6C6C;
+			}
+			div.center{
+				width: 1335px;
+				height: 350px;
+				
+				background-color:yellow ;
+				
+				
+			}
+			div.down{
+				width: 100%;
+				height: 100px;
+				background-color:#6C6C6C ;
+				color:white;
+				font-size: 20px;
+				
+				
+			}
+			div.left{
+				width: 900px;
+				height: 350px;
+				border: 5px;
+				float: left;
+				background: url(img/1.jpg) 100% 100%;
+				
+				
+			}
+			div.right{
+				width: 435px;
+				height: 100%;
+				border: 5px;
+				float: right;
+				background-color:#FFFFBB ;
+				
+				
+			}
+			div.biaoti{
+				width: 100%;
+				height: 83%;
+				text-align: center;
+				
+				
+			}
+			div.daohang{
+				width: 100%;
+				height: 17%;
+				font-size: 20px;
+			}
+			ul.ul1{
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				overflow:hidden;
+				float: left;
+				
+			}
+			ul.ul2{
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				overflow:hidden;
+				float: right;
+				
+			}
+			li{
+			    float:left;
+			    
+			    
+			}
+			a:link {text-decoration:none;}
+
+			a:visited {text-decoration:none;}
+			
+			a:hover {text-decoration:underline;
+			      background-color:darkorange;
+			}
+			a{
+				display:block;
+				width:60px;
+				color: white;
+				
+			}
+			label{
+				font-size: 20px;
+				text-align: center;
+				
+			}
+			input#submit{
+				height: 35px;
+				width: 278px;
+			}
+			input.input{
+				height: 30px;
+				width: 270px;
+			}
+			
+		</style>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				
+				$("input#submit").click(function(){
+					var username=$("input#username").val();
+					var pwd=$("input#password").val();
+					if(username==""||pwd==""){
+					alert("用户名,密码不能为空！！！")
+					return false;
+				  }
+				if((username!=UrlParm.parm("username"))||(pwd!=UrlParm.parm("password"))){
+						
+						alert("用户名或密码错误！！！")
+						return false;
+					}
+		
+				return true;			
+				});
+			});
+				
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<div class="biaoti"><h1 style="font-size: 60px;">论坛</h1></div>
+			<div class="daohang">
+				<ul class="ul1">
+					<li><a href="">首页</a></li>
+					<li><a href="">科技</a></li>
+					<li><a href="">百家</a></li>
+					<li><a href="">军事</a></li>
+					<li><a href="">奇闻</a></li>
+					<li><a href="">杂谈</a></li>
+					<li><a href="">帮助</a></li>
+					<li><a href="">更多</a></li>
+				</ul>
+				<ul class="ul2">
+					<li><a href="">登录</a></li>
+					<li><a href="register.html">注册</a></li>
+					
+				</ul>
+			</div>
+		</div>
+		<div class="center">
+			<div class="left"></div>
+			<div class="right">
+				<form  action="head.html" ><br/><br/>
+					<center><label class="title"><b>用户登录</b></label><br/><br/>
+					<label>账号:</label>&nbsp;&nbsp;
+					<input class="input type="text" id="username" name="username"/><br/><br/>
+					<label>密码:</label>&nbsp;&nbsp;
+					<input class="input type="password" id="password" name="password"/><br/><br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input id="submit" type="submit" value="登录"/></center><br/>
+					
+				</form>
+			</div>
+		</div>
+		<div class="down">
+			<center>敬请期待</center>
+		</div>
+		
+	</body>
+</html>

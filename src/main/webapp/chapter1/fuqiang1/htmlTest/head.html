@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div.top{
+				width: 100%;
+				height: 150px;
+				
+				background-color:#6C6C6C;
+			}
+			div.all{
+				width: 1335px;
+				height: 600px;
+				background:#FFFFBB;
+				
+				
+			}
+			div.biaoti{
+				width: 100%;
+				height: 83%;
+				text-align: center;
+				
+				
+			}
+			div.daohang{
+				width: 100%;
+				height: 17%;
+				font-size: 20px;
+			}
+			div.down{
+				border-style: solid;
+				border: 1px;
+				width: 600px;
+				height: 450px;
+				background-color: #FFFF99;
+				margin:0 auto
+				
+			}
+			div#123{
+				height: 350px;
+				width: 600px;
+				background-color: red;
+				overflow-y:scroll; 
+				overflow-x:scroll;
+			}
+			textarea#talk{
+				width: 590px;
+				height: 100px;
+			}
+			a:link {text-decoration:none;}
+
+			a:visited {text-decoration:none;}
+			
+			a:hover {text-decoration:underline;
+			      background-color:darkorange;
+			}
+			a{
+				display:block;
+				width:60px;
+				color: white;
+				
+			}
+			ul.ul1{
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				overflow:hidden;
+				float: left;
+				
+			}
+			li{
+			    float:left;
+			    
+			    
+			}
+			body{ text-align:center} 
+			button#talk1{
+				float: right;
+			}
+			</style>
+		
+			<script>
+				function appendText()
+				{
+					if($("textarea").val()==""){
+						alert("内容不能为空！！")
+					}else{
+	               	var tr2=$("<p align='left' style='width:600px;height:30px;background-color: #6C6C6C;color: white;'></p>").text($("#talk").val());
+	                 $("p#1").after(tr2);
+	                 $("textarea").val("")
+	                }
+	            }
+            </script>
+	</head>
+	<body>
+		<div class="all">
+			<div class="top">
+				<div class="biaoti"><h1 style="font-size: 60px;">论坛</h1></div>
+				<div class="daohang">
+					<ul class="ul1">
+						<li><a href="">首页</a></li>
+						<li><a href="">科技</a></li>
+						<li><a href="">百家</a></li>
+						<li><a href="">军事</a></li>
+						<li><a href="">奇闻</a></li>
+						<li><a href="">杂谈</a></li>
+						<li><a href="">帮助</a></li>
+						<li><a href="">更多</a></li>
+					</ul>
+				</div>
+				
+			</div>
+			
+			<div class="down">
+				<textarea type="text" name="talk" id="talk"></textarea><br />
+				<button id="talk1" onclick="appendText()">发表</button>
+				<div id="123">
+					<p id="1"></p>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

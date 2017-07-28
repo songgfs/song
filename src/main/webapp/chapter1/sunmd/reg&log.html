@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--BootStrap设计的页面支持响应式的 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+
+		<style>
+			#top {
+				background: url(img/top.png);
+				height: 150px;
+			}
+			
+			#title {
+				font-family: 华文琥珀;
+				color: rgb(42, 128, 200);
+				text-align: center;
+				height: 20px;
+				margin-top: 80px;
+			}
+			
+			.t2 {
+				position: relative;
+				z-index: 2;
+				font-size: 16px;
+				line-height: 60px;
+				text-align: center;
+				color: #999;
+				overflow: hidden;
+				height: 70px;
+				margin-top: 40px;
+			}
+			
+			.t2 .caption {
+				position: relative;
+				display: inline-block;
+			}
+			
+			.t2 .caption .line {
+				position: absolute;
+				top: 30px;
+				width: 300px;
+				height: 1px;
+				background-color: #ddd;
+			}
+			
+			.t2 .caption .line-l {
+				right: 100%;
+				margin-right: 15px;
+			}
+			
+			.t2 .caption .line-r {
+				left: 100%;
+				margin-left: 15px;
+			}
+			
+			#modl {
+				margin-top: 10px;
+			}
+		</style>
+		<script>
+			$(function() {
+
+				$("#s1").click(function() {
+					$("#s1")[0].style = "margin-left: 30px;cursor:pointer ;float: left; font-size:18px ; border-bottom: 2px solid blueviolet;height: 42px; ";
+					$("#s2")[0].style = "margin-left: 30px;cursor:pointer ;float: left; font-size:18px ; height: 42px; ";
+					/*$("#but").val("注册");
+					$("#rep")[0].style.display = "table-row";*/
+					$("#modl")[0].style.display = "block";
+					$("#modl2")[0].style.display = "none";
+
+				})
+
+				$("#s2").click(function() {
+					$("#s2")[0].style = "margin-left: 30px;cursor:pointer ;float: left; font-size:18px ; border-bottom: 2px solid blueviolet;height: 42px; ";
+					$("#s1")[0].style = "margin-left: 30px;cursor:pointer ;float: left; font-size:18px ; height: 42px; ";
+					/*$("#but").val("登录");
+					$("#rep")[0].style.display = "none";*/
+					$("#modl")[0].style.display = "none";
+					$("#modl2")[0].style.display = "block";
+				})
+
+				$("#but").click(function() {
+					$("form").submit();
+				})
+
+			})
+		</script>
+	</head>
+
+	<body>
+
+		<!--
+		描述：底层div
+	-->
+		<div class="container-fluid">
+			<!--
+        	作者：offline
+        	时间：2017-07-20
+        	描述：头部div
+        -->
+			<div id="top" class="row">
+				<div id="title">
+					<h1>亚信论坛</h1>
+				</div>
+				<div class="t2">
+					<span class="caption">
+						<span class="line line-l"></span>
+					<div id="s1" style=" margin-left: 30px;cursor:pointer ;float: left; font-size:18px ; border-bottom: 2px solid blueviolet;height: 42px; ">注册</div>
+					<div id="s2" style="margin-left: 30px; cursor:pointer ;float:left; font-size:18px ;height: 42px;">登录</div>&nbsp;&nbsp;
+					<span class="line line-r"></span>
+					</span>
+				</div>
+
+			</div>
+			<!--
+				清除浮动
+			-->
+			<div style="clear: both;"></div>
+			<!--
+        	作者：offline
+        	时间：2017-07-20
+        	描述：表单div
+        -->
+			<div id="modl" align="center" style="margin-top: 50px;height: 300px;" >
+				<form action="index.html" method="" class="form-horizontal">
+					<table>
+						<tr>
+							<td><label>用户名：&nbsp;&nbsp;</label></td>
+							<td height="50px"><input class="form-control" type="text" name="username" value="" placeholder="请输入用户名" /></td><br />
+						</tr>
+						<tr>
+							<td><label>密码：&nbsp;&nbsp;</label></td>
+							<td height="50px"><input type="password" class="form-control" name="password" value="" placeholder="请输入密码" /></td>
+						</tr>
+						<tr id="rep">
+							<td><label>确认密码：&nbsp;&nbsp;</label></td>
+							<td height="50px"><input type="password" class="form-control" name="repassword" value="" placeholder="请再次输入密码" /></td>
+						</tr>
+						<tr id="aft">
+							<td height="50px" colspan="2" align="right">
+								<input class="btn btn-default" id="but" type="button" value="注册" />&nbsp;&nbsp;
+								<input class="btn btn-default" type="reset" value="重置" />
+							</td>
+						</tr>
+					</table>
+				</form>
+
+			</div>
+			<div id="modl2" align="center" style="margin-top: 50px; display:none ;height: 300px;">
+				<form action="index.html" method="" class="form-horizontal bs-example bs-example-form">
+					<table>
+						<tr>
+							<td><label>用户名：&nbsp;&nbsp;</label></td>
+							<!--<span class="input-group-addon"  style="border-color:rgb(102,175,233) ; width: 40px; height: 34px; background: white; position: absolute;top:228px ; left:550px ;">
+								<img src="img/t1.png" /> 
+								<font color="gainsboro">|</font>
+							</span>-->
+							<td height="50px"><input class="form-control" type="text" name="username" value="" placeholder="请输入用户名" /></td><br />
+
+						</tr>
+						<tr>
+							<td><label>密码：&nbsp;&nbsp;</label></td>
+							<!--<span class="input-group-addon"  style="border-color:rgb(102,175,233) ; width: 40px; height: 34px; background: white; position: absolute;top:278px ; left:550px ;">
+								<img src="img/t2.png" /> 
+								<font color="gainsboro">|</font>
+							</span>-->
+							<td height="50px"><input type="password" class="form-control" name="password" value="" placeholder="请输入密码" /></td>
+						</tr>
+						<tr>
+							<td height="50px" colspan="2">
+								<input class="btn btn-default" id="but" type="button" value="登录" style="background: rgb(61,155,216);width: 100%;" />
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+
+			<!--
+        	作者：offline
+        	时间：2017-07-20
+        	描述：底部div
+        -->
+
+			<div class="footer" align="center">
+				<p>
+					<a target="_blank" href="http://help.tianya.cn/about/about.html">关于亚信</a> |
+					<a target="_blank" href="http://help.tianya.cn/about/service.html">广告服务</a> |
+					<a target="_blank" href="http://service.tianya.cn/">亚信客服</a> |
+					<a target="_blank" href="http://help.tianya.cn/about/ystl.html">隐私和版权</a> |
+					<a target="_blank" href="http://help.tianya.cn/about/contact.html">联系我们</a> |
+					<a target="_blank" href="http://join.tianya.cn">加入亚信</a> |
+					<a target="_blank" href="http://www.tianya.cn/mobile/">手机版</a> |
+					<a target="_blank" href="http://service.tianya.cn/alarm/jbts.do">举报投诉</a>
+				</p>
+				<p>© 1999 - 2017 亚信社区</p>
+			</div>
+
+		</div>
+	</body>
+
+</html>

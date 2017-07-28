@@ -1,0 +1,121 @@
+<!--登录界面-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/temple.css">
+		<link rel="stylesheet" href="css/login.css">
+		<script>
+			function check()
+			{
+				var name=document.getElementById("name");
+				var pass=document.getElementById("password");
+				if(name.value=="") {
+					alert("please name!请输入用户名");
+					return ;
+				}
+				else  if(pass.value=="") {
+					alert("please password!!请输入密码");
+					return;
+				}
+				else  if((pass.value=="1")&&(name.value=="1")) {
+					alert("success 登录成功");
+					document.location = "index.html"
+				}
+				else {
+					alert("登录失败，请检查用户名和密码是否有误！");
+					return;
+				}
+				return true;
+			}
+		</script>
+	</head>
+
+	<body>
+		<!--顶部 B-->
+		<div class="top">
+			<div class="center top_c">
+				你好~
+			</div>
+		</div>
+		<!--顶部 E-->
+		<!--logo B-->
+		<div class="logo">
+			<div class="center l_c">
+				<div class="l_left">
+					<h1>
+						<a href="#">QZLT</a>
+					</h1>
+				</div>
+			</div>
+		</div>
+		<!--logo E-->
+		<!--内容 B-->
+		<div class="main center">
+			<div class="m_left fl">
+				<img src="img/student.png" alt="">
+			</div>
+			<div class="m_right fr">
+				<h2>求知论坛网</h2>
+				<table>
+				<div class="uName_pwd">
+					<h1>用户名:</h1>
+					<input name="name" id="name" class="txt" onChange='check("name")' type="text" placeholder="请输入账号">
+					<h1>密&nbsp;&nbsp;码:</h1>
+					<input class="btn" name="password" id="password" onChange='check("password")' type="password" placeholder="请输入密码">
+				</div>
+				<div class="remember">
+					<span class="fl"><input type="checkbox">自动登录</span>
+
+					<a class="fr" href="#"></a>
+				</div>
+				<div>
+				<!--	<input type="button" class="loginBtn" value="登 &nbsp;&nbsp;&nbsp;&nbsp;陆" >-->
+					<input type="submit" name="submit" class="loginBtn" onclick="check()" value="登&nbsp;&nbsp;&nbsp;&nbsp;陆" >
+				</div>
+				</table>
+			</div>
+		</div>
+<!--内容 E-->
+		
+		
+		<!--底部 B-->
+		<div class="foot">
+			<div class="center">
+				<div class="f_left">测试 测试 </div>
+			</div>
+		</div>
+		<!--底部 E-->
+	</body>
+<script>
+ $(table).submit(	function  check() {
+		var name=document.getElementById(name).valueOf();
+		var password=document.getElementById(password).valueOf();
+		if(name.value=="")
+		{
+			alert("请输入用户名");
+			name.focus();
+			return;
+		}
+		else if(password.value=="")
+		{
+			alert("请输入密S码");
+			return;
+		}
+		else if((password.value=="1")&&(name.value=="1")) {
+			window.location.href='index.html';
+			return;
+		}
+		else
+		{
+			alert("登录失败，请检查用户名和密码是否有误！");
+			return;
+		}
+		return true;
+	}
+ )
+</script>
+</html>

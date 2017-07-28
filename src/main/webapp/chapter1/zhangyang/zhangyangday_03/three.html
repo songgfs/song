@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>three.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+</head>
+<body>
+	<h2>image对象</h2>
+	<img id="compman" src="image/3.jpg" width="107" height="98">
+	<br>
+	<br>
+	<input type="button" onclick="changeSize()" value="点击改变图像大小">
+	<script>
+		function changeSize() {
+			document.getElementById("compman").height = "250";
+			document.getElementById("compman").width = "300";
+		}
+	</script>
+</body>
+</html>

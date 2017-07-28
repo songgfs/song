@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#green {
+	color:green;
+}
+
+p.lei {
+	color: #f60;
+	background: #666;
+}
+	
+p[padding] {
+	color:#F9C;
+}
+
+a:link {
+	color:#F00;
+	text-decoration:none;
+}
+a:visited {
+	color:#0F0;
+	text-decoration:none;
+}
+a:hover {
+	color:#0FF;
+	text-decoration:underline;
+} 
+a:active {
+	color:#00F;
+	text-decoration:underline;
+}
+	
+li {
+	color:#0C0;
+}
+	
+table,th,td{
+	border:1px solid blue;
+}
+	
+.kuang {
+	padding:10px 20px;
+	border-style:solid;
+	border-color:#000;
+	margin:20px 10px;
+}
+
+p em {color:red;}
+
+p > strong {color:red;}
+
+h4 + p {color:#0CC;}

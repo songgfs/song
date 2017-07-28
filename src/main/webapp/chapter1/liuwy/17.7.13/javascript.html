@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+function answer(txt){
+	alert(txt);
+	}
+function  fanhui(){
+return("这是返回的值！")
+	}
+function jisuan(x,y){
+
+return(x*y);
+	}
+function massage(){
+try{
+	aclert("Welcome guest!")
+	}catch(err)
+	{
+		txt="本页中存在错误。\n\n"
+   txt+="错误描述：" + err.description + "\n\n"
+   txt+="点击“确定”继续。\n\n"
+   alert(txt)
+		
+		
+		}
+	}
+var txt=""
+function massagetwo()
+{
+try
+   {
+   adddlert("Welcome guest!")
+   }
+catch(err)
+   {
+     txt="本页中存在错误。\n\n"
+     txt+="点击“确定”继续查看本页，\n"
+     txt+="点击“取消”返回首页。\n\n"
+     if(!confirm(txt))
+         {
+         document.location.href="dom.html"
+         }
+   }
+}
+function Throw(){
+	var x=prompt("请输入 0 至 10 之间的数：","")
+try
+{ 
+if(x>10) 
+  throw "Err1" 
+else if(x<0)
+  throw "Err2"
+else if(isNaN(x))
+  throw "Err3"
+} 
+catch(er)
+{
+if(er=="Err1") 
+  alert("错误！该值太大！")
+if(er == "Err2") 
+  alert("错误！该值太小！") 
+if(er == "Err3") 
+  alert("错误！该值不是数字！") 
+}}
+
+onerror=handleErr
+var txt=""
+
+function handleErr(msg,url,l)
+{
+txt="本页中存在错误。\n\n"
+txt+="错误：" + msg + "\n"
+txt+="URL: " + url + "\n"
+txt+="行：" + l + "\n\n"
+txt+="点击“确定”继续。\n\n"
+alert(txt)
+return true
+}
+
+function message()
+{
+adddlert("Welcome guest!")
+}
+</script>
+<style>
+a{
+	color:
+	#0CF
+	}
+</style>
+
+</head>
+
+<body>
+<p>使用 If 语句。如果浏览器时间小于 10，那么会向您问“早上好”。10-15问候中午好，15-23问候晚上好</p>
+<br /><hr />
+
+<script type="text/javascript">
+var d = new Date();
+var time = d.getHours();
+
+if (time < 10) 
+{
+	alert("早上好！")
+}else if(time>=10&&time<=15){
+	alert("中午好！")
+	}else{
+    alert("晚上好！")
+		}
+</script>
+
+<a>声明一个变量，赋值输出，改变值输出</a><br />
+<script>
+var a="onename";
+document.write(a);
+document.write("<br>");
+a="twomame";
+document.write(a);;
+</script><br /><hr />
+<a>随机链接</a><br />
+<script type="text/javascript">
+var r=Math.random()
+if (r>0.5) 
+{
+document.write("<a   href='http://www.w3school.com.cn' style='color:#000'>学习 Web 开发！</a>")
+}
+else
+{
+document.write("<a href='http://www.microsoft.com' style='color:#000'>访问微软！</a>")
+}
+</script><br /><hr />
+<a>带有参数的函数</a><br />
+
+<input value="早晨" type="button" onclick="answer('早上好！')" />
+<input value="中午" type="button" onclick="answer('中午好！')"/><hr />
+<a>带有返回值的函数</a><br />
+<script type="text/javascript">
+
+document.write(fanhui())
+</script><hr />
+<a>带有参数和返回值的函数</a>
+<p>计算两数之积</p>
+
+<script>
+document.write(jisuan(6,6));
+</script>
+<br /><hr />
+<a>for循环</a><br />
+输出0-10<br /><script>
+for(var i=0;i<=10;i++){
+	document.write(i+" ");
+	}
+</script><br /><hr />
+<a>循环产生HTML标题</a><br />
+<script>
+for(var i=1;i<=5;i++){
+	document.write("<h"+i+">这是标题"+i+"</h"+i+">")
+	}
+</script><br /><hr />
+<a>while循环</a><br />
+输出0-10<br /><script>
+var i=0;
+while(i<=10){
+	document.write(i+" ");
+	i++;
+	}
+</script><br /><hr />
+<a>do-while循环</a><br />
+输出0-10<br /><script>
+var i=0;
+do{
+	document.write(i+" ");
+	i++;
+	}while(i<=10)
+</script><br /><hr />
+<a>break语句</a><br />
+在5时停止<br /><script>
+for(var i=0;i<=10;i++){
+	
+	if(i==5){break;}
+	document.write(i+" ");
+	}
+</script><br /><hr />
+<a>continue语句</a><br />
+在5时跳过<br /><script>
+for(var i=0;i<=10;i++){
+	
+	if(i==5){continue;}
+	document.write(i+" ");
+	}
+</script><br /><hr />
+<a>使用for..in声明</a><br />
+来遍历数组内元素<br /><script>
+var x;
+var mycar=new Array();
+mycar[0]="宾利";
+mycar[1]="宝马";
+mycar[2]="劳斯莱斯";
+for(x in mycar){
+	document.write(mycar[x]+" ");
+	}
+</script><br /><hr />
+<a>try..catch语句</a><br />
+<input type="button" value="点击查看" onclick="massage()" /><br /><hr />
+<a>带有了确认框的try..catch语句</a><br />
+<input type="button" value="点击查看" onclick="massagetwo()" /><br /><hr />
+<a>throw声明</a><br />
+<input type="button" value="点击查看" onclick="Throw()" /><br /><hr />
+<a>onerror事件</a><br />
+<input type="button" value="查看消息" onclick="message()" />
+</body>
+</html>

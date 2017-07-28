@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js学习</title>
+<style>a{ color:#F93; font-size:36px}
+</style>
+<script>
+function myFunction()
+{
+var x=document.getElementById("baidu");
+x.href="https://www.sogou.com/";
+ 
+x.innerHTML="进入搜狗浏览器"; 
+x.target="_blank"   
+}
+
+function changeImage()
+{
+element=document.getElementById('myimage')
+if (element.src.match("莲花"))
+  {
+  element.src="images/无标题.png";
+  }
+else
+  {
+  element.src="images/莲花.png";
+  }
+}
+
+
+function FunctionOne()
+{
+var x=document.getElementById("yanzheng").value;
+if(x==""||isNaN(x))
+	{
+	alert("Not Numeric");
+	}
+}
+
+
+function FunctionTwo()
+{
+ alert("你好！");
+var x= confirm("确认提交吗?");
+ alert(x);
+ var y=prompt("请输入你的id：");
+ alert(y);
+for(var i=0;i<=10;i++)
+{document.write(alert("hi"));
+		}
+}
+function FunctionThree()
+{
+	document.write(5+5);
+	document.write("<hr>");
+	document.write(5/2);
+	document.write("<hr>");
+	document.write(5+"5");
+	document.write("<hr>");
+	document.write(5*"5");
+	document.write("<hr>");
+	}
+	
+function Time(){	
+var weeks=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
+var date=new Date();
+var y=date.getYear()+1900;
+var month= date.getMonth()+1;
+var d=date.getDate();
+var h=date.getHours();
+var m=date.getMinutes();
+var s=date.getSeconds();
+var day=date.getDay();
+var time=document.getElementById("time");
+
+time.innerHTML=(y+"-"+month+"-"+d+" "+h+":"+m+":"+s+" "+weeks[day]);
+
+setTimeout(Time,1000);
+}
+function openOne(){
+	open();}
+	function openTwo(){
+	open("http://www.baidu.com");}
+	var index=0;
+function imgstart(){
+	
+	var imglist=["images/莲花.png","images/无标题.png"];
+	var obj=document.getElementById("img1");
+	obj.src=imglist[index];
+	index++;
+	if(index>=imglist.length){
+		index=0;
+		}
+		setTimeout(imgstart,500);
+	}
+function setmyimg(obj){
+	document.getElementById("myimg").src=obj.src;
+	}
+function changestyle(){
+	var x=document.getElementById("change").style.color="#F00";
+	
+	}
+	
+function getfocus()
+{document.getElementById('myAnchor').focus()}
+
+function losefocus()
+{document.getElementById('myAnchor').blur()}
+</script>
+
+</head>
+
+<body onload="Time()">
+<a>提示框</a><br />
+<button type="button" onclick="alert('Welcome!')">点击这里</button><br><hr /><br />
+<a>改变链接</a><br />
+
+<a style="font-size:20px; color:#3CF" id="baidu" href="http://www.baidu.com">
+进入百度浏览器</a>
+<button type="button" onclick="myFunction()">点击</button><br /><hr />
+
+<p><a>图片切换</a></p><a style="font-size:12px">点击切换</a>
+<p><br />
+  <img id="myimage" onclick="changeImage()" src="images/无标题.png"><br /><br /><a style="font-size:12px">点一下自动切换</a><br /><img id="img1" onclick="imgstart()" src="images/莲花.png" width="359" height="413" /><br />
+</p>
+<table width="200" border="0">
+  <tr>
+    <td colspan="2"><img id="myimg" src="images/莲花.png" width="262" height="300" /></td>
+  </tr>
+  <tr>
+    <td><img src="images/莲花.png" width="129" height="150" onmouseover="setmyimg(this)"/></td>
+    <td><img src="images/无标题.png" width="125" height="150" onmouseover="setmyimg(this)"/></td>
+  </tr>
+</table>
+<br />
+<hr />
+<a>验证表单<span style="font-size:13px">（是否为数字）</span></a><br />
+<input id="yanzheng" type="text">
+<button type="button" onclick="FunctionOne()">验证</button><br /><br /><hr />
+<a>对话框</a><br />
+
+<button id="duihua" onclick="FunctionTwo()">对话框</button><br /><br /><hr />
+
+<br />
+<a>运算符</a>
+<br />
+<button id="yunsuan" onclick="FunctionThree()">运算</button><br /><br /><hr />
+<a>时间</a><br />
+
+<button id="time" onclick="Time()">时间</button><br /><br /><hr />
+<a>打开窗体</a><br />
+<button id="one" onclick="openOne()">打开一个新窗体</button><br /><br /><button id="two" onclick="openTwo()">打开一个带有url的新窗体</button>
+<br /><hr />
+<a>改变文本样式</a>
+<div id="change" style="color:#F96; font-size:50px">这是一个div<br />
+<button  onclick="changestyle()">点此改变样式</button></div><hr />
+<br />
+<a>获得失去焦点</a><br />
+
+<a id="myAnchor" href="http://www.w3school.com.cn" style="font-size:20px; color:#3CF">访问 W3School.com.cn</a>
+<br /><br/>
+<input type="button" onclick="getfocus()" value="获得焦点">
+<input type="button" onclick="losefocus()" value="失去焦点">
+
+</body>
+</html>

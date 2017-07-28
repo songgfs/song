@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul"><li>我要留言</li></ul>
+<div id="m1">
+<input type="text" id="txt"/>
+<input type="button" value="delete" onclick="">
+</div>
+<input type="button" value="add" onclick="add()"/>
+</body>
+
+<script>
+    function add(){
+        var ul = document.getElementById("ul");
+        var li = ul.firstChild.cloneNode(true);
+
+        var txt = document.getElementById("m1");
+        li.innerHTML = txt.value;
+        ul.appendChild(li);
+        txt.value = "";
+    }
+</script>
+
+</html>
+

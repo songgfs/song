@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>p{
+color:blue;}
+body{
+color:red;
+}
+</style>
+<script>
+function text(id){
+	id.innerHTML="王景州";
+	
+}</script>
+</head>
+<body>
+<h1 onclick="text(this)"> 猜猜我是谁？点击一下</h1>
+<p title="wjz">my name is wangjingzhou</p>
+<ul id="a">
+<li>性别：男</li>
+<li>年龄：21岁</li>
+<li>爱好：打篮球</li>	
+</ul>
+<script src="www.js"></script>
+<script>
+var a= document.getElementById("a");
+alert(a.getAttribute("title"));
+a.setAttribute("title", "wjz");
+alert(a.getAttribute("title"));
+</script>
+
+</body>
+</html>

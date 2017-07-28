@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>条件语句</title>
+</head>
+
+<body>
+
+<p>点个按钮。</p>
+
+<button onclick="myFunction()">click</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x="";
+var y;
+var a=2,b=3;
+if (a>b)
+  {
+	  x=a-b;
+	  y="运算结果为："+x;
+  }
+else if (a<b)
+  {
+	  x=b-a;
+	  y="运算结果为："+x;
+  }
+else
+  {
+	  x=a+b;
+	  y="运算结果为："+x;
+  }
+document.getElementById("demo").innerHTML=y;
+}
+</script>
+
+</body>
+</html>

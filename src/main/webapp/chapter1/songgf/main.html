@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>html</title>
+	<script type="text/javascript">
+		function speaks(s){
+			document.getElementById("value" + s).style.display="inline";
+			document.getElementById("ok"+s).style.display="inline";
+		}
+		function check(m){
+			var now = new Date();
+			var number = now.getSeconds()+now.getSeconds()%43;
+			var val = document.getElementById("value"+m).value;
+			var element = document.getElementById("speak"+m);
+			
+			
+			//创建元素节点添加属性值
+			var el = document.createElement("p");
+			el.setAttribute('type','font-size:12px');
+			el.setAttribute('id','uvalue'+m+number);
+			var inner = document.createTextNode(val);
+			el.appendChild(inner);
+			
+			
+			//添加删除按钮
+			var del = document.createElement("input");
+			del.setAttribute('id','delId'+m+number);
+			del.setAttribute('style','margin-left:360px;font-size:12px;');
+			del.setAttribute('type','button');
+			del.setAttribute('onclick','del('+m+number+')');
+			del.setAttribute('value','删除');
+				
+			element.appendChild(el);
+			element.appendChild(del);
+			
+			document.getElementById("value"+m).value="";
+			document.getElementById("value"+m).style.display="none";
+			document.getElementById("ok"+m).style.display="none";
+		}
+		function del(m){
+			var list = document.getElementById("uvalue"+m);
+			var but = document.getElementById("delId"+m);
+			if(list!=null){
+				list.remove();
+				but.remove();
+			}else{
+				alert("已删除，该评论已经不存在");
+			}
+		}
+		
+		function insert(){
+			//产生一个随机数
+			var now = new Date();
+			var number = now.getSeconds()+now.getSeconds()%43;
+			//创建div
+			var rootdiv = document.getElementById("divcenter");
+			var chlidDiv = document.createElement("div");
+			chlidDiv.setAttribute('id','ten');
+			//内容
+			var p0 = document.createElement("p");
+			p0.setAttribute('id','text');
+			var tes = document.createTextNode('以前我经常纳闷：为什么很多有钱人也不开心? 后来我想通了：因为有钱人他想干什么就能干什么，他想不开心就不开心');
+			p0.appendChild(tes);
+			chlidDiv.appendChild(p0);
+			//创建p节点
+			var p1 = document.createElement("p");
+			p1.setAttribute('id','test');
+			p1.setAttribute('onclick','speaks('+number+')');
+			var inner = document.createTextNode("评论");
+			p1.appendChild(inner);
+			chlidDiv.appendChild(p1);
+			//创建
+			var p2 = document.createElement("p");
+			p2.setAttribute('id','speak'+number);
+			p2.setAttribute('style','font-size:12px;text-align:left');
+			chlidDiv.appendChild(p2);
+			
+			//创建文本域
+			var text = document.createElement("textarea");
+			text.setAttribute('id','value'+number);
+			text.setAttribute('style','width:390px;heigth:30px;display:none');
+			chlidDiv.appendChild(text);
+			
+			//创建输入
+			var inp = document.createElement("input");
+			inp.setAttribute('id','ok'+number);
+			inp.setAttribute('style','margin-left:360px;font-size:12px;display:none');
+			inp.setAttribute('type','button');
+			inp.setAttribute('onclick','check('+number+')');
+			inp.setAttribute('value','提交');
+			chlidDiv.appendChild(inp);
+			
+			//加入到根元素
+			rootdiv.appendChild(chlidDiv);
+			var chlid = document.createElement("div");
+			chlid.setAttribute('id','step');
+			rootdiv.appendChild(chlid);
+		}
+	</script>
+	<style type = "text/css">
+		body{
+			background-color:#FFFFCC;
+			margin:0px;
+			padding:0px;
+		}
+		#top{
+		    background-color:#C0C0C0;
+			width:auto;
+			padding-top:20px;
+			padding-bottom:30px;
+			padding-left:30px;
+			padding-right:20px;
+			margin:20px 20px 5px 50px;
+		}
+		#buttom{
+			background-color:#C0C0C0;
+			width:auto;
+			overflow:auto;
+			padding-top:20px;
+			padding-bottom:30px;
+			padding-left:30px;
+			padding-right:20px;
+			border-top:1px solid #ccc;
+			margin:20px 20px 20px 50px;
+		}
+		#centers{
+			background-color:#E8E8E8;
+			width:auto;
+			height:auto;
+			overflow:auto;
+			border-top:1px solid #ccc;
+			padding-top:5px;
+			padding-bottom:10px;
+			padding-right:20px;
+			margin:20px 20px 20px 50px;
+		}
+		#left {
+			width:300px;
+			height:200px;
+			margin-left:30px;
+			padding-top:20px;
+			float:left;
+		}
+		#divcenter {
+			width:500px;
+			height:auto;
+			overflow:auto;
+			margin-left:20px;
+			border:1px solid #ccc;
+			//border:1px solid red;
+			padding-top:20px;
+			float:left;
+			text-align:center;
+		}
+		#right {
+			width:auto;
+			height:auto;
+			overflow:auto;
+			margin-left:30px;
+			padding-top:20px;
+			float:left;
+			text-align:right;
+		}
+		#ten{
+			width:400px;
+			text-align:center;
+			height:auto;
+			overflow:auto;
+			margin-left:30px;
+			margin-top:5px;
+			border-top:1px solid #ccc;
+			
+		}
+		#test{
+			font-size:12px;
+			margin-left:200px;
+			padding-buttom:5px;
+		}
+		#step{
+			height:10px;
+		}
+		#text{
+			font-size:12px;
+			text-align:left;
+		}
+	</style>
+</head>
+<body>
+	<div id="top">
+		<div style="margin-rigth:10px;float:right">
+			<td>
+				<tr><a href="/">首页</a></tr>
+				<tr><a href="login.html">登录</a></tr>
+				<tr><a href="login.html">注册</a></tr>
+			</td>
+		</div>
+	</div>
+	<div id = "centers">
+		<div id="left">
+		</div>
+		<div id="divcenter" style="text-align:center">
+		<div  style="text-align:right"><input onclick="insert()" type="button" value="添加信息"/></div>
+			<div id="ten">
+				<p id="text">
+					我特别羡慕两种女人，一种是特别拽，走路带风，自己事业贼牛B谁都不屌的那种; 一种是娇滴滴会撒娇任谁看见了都想拼了命保护的那种。 刚好，我是卡在中间上不去，也下不来的那种，不牛B还TM不会撒娇。。。关键还累死累活的活着!
+				</P>
+				<p id="test" onclick="speaks('1')">评论</p>			
+				<div id="speak1" style="font-size:12px;text-align:left">
+				</div>
+				<textarea id="value1" style="width:390px;heigth:30px;display:none"></textarea>
+				<input type="button" id="ok1" onclick="check('1')" value="提交" style="margin-left:360px;font-size:12px;display:none"/>
+			</div>
+			<div id="step"></div>
+			<div id="ten" >
+				<p id="text">以前我经常纳闷：为什么很多有钱人也不开心? 
+					后来我想通了：因为有钱人他想干什么就能干什么，他想不开心就不开心</p>
+				<p id="test" onclick="speaks('2')">评论</p>
+				<p id="speak2" style="font-size:12px;text-align:left"></p>
+				<textarea id="value2" style="width:390px;heigth:30px;display:none"></textarea>
+				<input type="button" id="ok2" onclick="check('2')" value="提交" style="margin-left:360px;font-size:12px;display:none"/>
+			</div>
+			<div id="step"></div>
+		</div>
+		<div id="right">		
+		</div>
+	</div>
+	<div id="buttom"></div>
+</body>
+</html>

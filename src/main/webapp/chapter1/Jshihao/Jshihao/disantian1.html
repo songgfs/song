@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+function disp_alert()
+{
+alert("点击下面的方框")
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="disp_alert()" value="显示" />
+<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:green;color:#ffffff;width:90px;height:20px;padding:40px;font-size:12px;">请点击这里</div>
+
+<script>
+function mDown(obj)
+{
+obj.style.backgroundColor="#1ec5e5";
+obj.innerHTML="松开鼠标按钮"
+}
+
+function mUp(obj)
+{
+obj.style.backgroundColor="red";
+obj.innerHTML="按下鼠标按钮"
+}
+</script>
+<hr/>
+<hr/><script>
+num=new Object();
+num.one="1"
+num.two="2";
+num.three="3";
+num.four="4";
+document.write(num.one +  num.two + num.three);
+</script>
+<hr/>
+<script>
+document.write("可用高度：" + screen.availHeight);
+document.write("可用宽度：" + screen.availWidth);
+</script>
+<hr/>
+<script>
+document.write(location.href);
+</script>
+<hr/>
+
+</body>
+</html>

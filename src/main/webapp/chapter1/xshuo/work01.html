@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>work1</title>
+	</head>
+
+	<body>
+		<h1>按钮</h1>
+		<p>运行时间</p>
+		<script>
+			document.write(Date());
+		</script>
+
+		<h1>按钮1</h1>
+		<p>
+			按钮反应
+		</p>
+		<button type="button" onclick="alert('欢迎!')">按钮1</button>
+
+		<h1>按钮2</h1>
+		<p id="demo">
+			改变颜色
+		</p>
+		<script>
+			function myFunction2() {
+				x = document.getElementById("demo")
+				x.style.color = "#ff0000";
+			}
+		</script>
+		<button type="button" onclick="myFunction2()">按钮2</button>
+
+		<h1>按钮3</h1>
+		<p>请输入数字，如果输入值不是数字，浏览器会弹出提示框</p>
+		<input id="demo3" type="text">
+		<script>
+			function myFunction3() {
+				var x = document.getElementById("demo3").value;
+				if(x == "" || isNaN(x)) {
+					alert("您所输入不是数字");
+				}
+			}
+		</script>
+		<button type="button" onclick="myFunction3()">按钮3</button>
+
+		<h1>按钮4</h1>
+		<p id="demo4">点击前</p>
+		<button type="button" onclick="myFunction4()">按钮4</button>
+		<script>
+			function myFunction4() {
+				document.getElementById("demo4").innerHTML = "点击后";
+			}
+		</script>
+
+		
+
+		<h1>按钮6</h1>
+		<p id="xushuo">许硕</p>
+		<div id="yaxin">亚信</div>
+		<p>
+			<button type="button" onclick="myFunction6()">变变变</button>
+		</p>
+		<script>
+			function myFunction6() {
+				document.getElementById("xushuo").innerHTML = "亚信";
+				document.getElementById("yaxin").innerHTML = "许硕";
+			}
+		</script>
+		<p>当您点击上面按钮，两个元素会改变</p>
+		
+		<h1>图片</h1>
+		<img src="image/123.jpg" />
+
+		<h1>按钮7</h1>
+		<p>阅读完成时间</p>
+		<button onclick="myFunction7()">点击</button>
+		<script>
+			function myFunction7() {
+				document.write(Date());
+			}
+		</script>
+		
+		<h1>输出全部数组</h1>
+		<script>
+			var  i;
+			var cars = new Array();
+			cars[0]="Saab";
+			cars[1]="Volvo";
+			cars[2]="BMW";
+			for (i=0;i<cars.length;i++)
+			{
+				document.write(cars[i] + "<br>");
+			}
+		</script>
+
+	<p>有两种方式可以访问对象属性：
+	</p>
+	<p>
+		你可以使用.property或["property"].
+	</p>
+	<p id="demo8"></p>
+	<script>
+		var person={
+			firstName:"john",
+			lastName:"Doe",
+			id: 5566
+		};
+		document.getElementById("demo8").innerHTML=
+		person["firstName"]+" "+person["lastName"];
+	</script>
+	</body>
+
+</html>

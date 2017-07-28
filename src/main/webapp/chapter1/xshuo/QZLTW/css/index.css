@@ -1,0 +1,86 @@
+/*网站导航 B*/
+.cRed {
+	border-bottom: 1px solid red;
+}
+.h2Title {
+	hight-animation: 76px;
+	font: normal 700 24px/76px "黑体";
+	text-align: center;
+}
+.nav {
+	height: 77px;
+	background-color: #fff;
+}
+.nav .nav_c {
+	height: 77px;
+/*	background-color: red;*/
+}
+.nav .nav_c li {
+	float:left;
+	height: 77px;
+	font:normal normal 20px/77px "黑体";
+	margin-right: 25px;
+}
+.nav .nav_c li a{
+	color : #666;
+/*	text-decoration: underline;*/
+}
+.nav .nav_c li a:hover {
+	color: red;
+}
+/*网站导航 E*/
+/*首页banner B*/
+.p1 {
+	height:36px;
+	font:normal 700 19px/36px "楷体";
+	padding-left:10px;
+	text-align:center ;
+	color: #000000;
+}
+.banner {
+	
+}
+.banner ul {
+	width: 1320px;
+	margin: 0 auto;
+}
+.banner ul li{
+	float: left;
+	width: 320px;
+	background-color: red;
+	position: relative;
+	}
+	.banner ul li img {
+		vertical-align: middle;
+	}
+	.banner .des {
+		width: 320px;
+		height: 50px;
+		background-color: rgba(255,255,255,.6);
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+	}
+/*首页banner E*/
+/*forum B*/
+.forum {
+	height: 1001px;
+}
+#bk {
+	border:1px solid  #000;
+	background-color: #ffffff;
+}
+.forum .text_box {
+	width: 1280px;
+	height: 260px;
+	margin: 20px auto;
+}
+.forum .d_middle {
+	margin: 55px 55px 20px 300px;
+}
+.forum .d_middle li {
+	height: 20px;
+	line-height:0px;
+}
+
+/*forum E*/

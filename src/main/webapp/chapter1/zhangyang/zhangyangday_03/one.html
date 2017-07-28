@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>register.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<title>前端开发</title>
+</head>
+<body>
+	<h1>关于JavaScriptDoM</h1>
+	<h2>document对象</h2>
+	<script>
+		document.write("我叫张扬");
+	</script>
+	<br />返回文档中锚的数目
+	<br />
+	<a name="j">九阴真经</a>
+	<br>
+	<a name="S">射雕英雄传</a>
+	<br>
+	<a name="Y">倚天屠龙记</a>
+	<br>
+	<p>
+		锚的数量:
+		<script>
+			document.write(document.anchors.length);
+		</script>
+	</p>
+	返回文档中表单的数量
+	<br />
+	<form name="Form1"></form>
+	<form name="Form2"></form>
+	<form></form>
+	<p>
+		表单数目:
+		<script>
+			document.write(document.forms.length);
+		</script>
+	</p>
+	返回文档的标题为:
+	<script>
+		document.write(document.title);
+	</script>
+	<script>
+		function getValue() {
+			var x = document.getElementById("myHeader");
+			alert(x.innerHTML);
+		}
+	</script>
+	<h1 id="myHeader" onclick="getValue()">请点击!</h1>
+	<img border="1" src="image/1.jpg" width="150" height="113">
+	<img border="1" src="image/2.jpg" width="152" height="128">
+	返回图片数目
+	<br>
+	<p>
+		图像数目:
+		<script>
+			document.write(document.images.length);
+		</script>
+		<br> <a href="two.html">下一个对象</a>
+</body>
+</html>
+
